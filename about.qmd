@@ -1,6 +1,6 @@
 ---
 title: About My Explorations with LLMs
-image: profile.JPG
+image: profile.png
 about:
   template: jolla
 ---

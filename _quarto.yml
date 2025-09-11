@@ -12,7 +12,7 @@ website:
         href: https://www.linkedin.com/in/hanxi-guo-765289301/
 format:
   html:
-    theme: Minty
+    theme: minty
     css: styles.css
 
 execute:

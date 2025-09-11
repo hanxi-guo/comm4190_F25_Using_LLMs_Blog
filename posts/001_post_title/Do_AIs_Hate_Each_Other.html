@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.34">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Hanxi">
+<meta name="dcterms.date" content="2025-09-10">
+<meta name="description" content="Do AIs actually get along—or would they throw shade if given the chance?">
+
+<title>Do AIs Hate Each Other? – About My Explorations with LLMs</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-496fe84c207e48339a4f0fe0f76bf4ef.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">About My Explorations with LLMs</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About My Explorations with LLMs</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/hanxi-guo"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/hanxi-guo-765289301/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Do AIs Hate Each Other?</h1>
+                  <div>
+        <div class="description">
+          Do AIs actually get along—or would they throw shade if given the chance?
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">promoting</div>
+                <div class="quarto-category">dueling LLMs</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Hanxi </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 10, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>Since AIs could link to the internet, they should be able to know the existence of each other. Have you ever wondered how AIs see each other? What happens when two models are told to roast each other? Do they maintain politeness, or reveal unexpected personalities?</p>
+<blockquote class="blockquote">
+<p>In this experiment we consider 2 LLMs: OpenAI/ChatGPT-4o-latest and Anthropic/claude-3.5-sonnet.For each round, I simply played the role of listener—copying and pasting their exchanges while giving new prompts at the start. Since the chats were run in non-logged-in sessions, they would not have any memory for the user. To keep things simple, I’ll just call Anthropic/claude-3.5-sonnet “Claude” and OpenAI/ChatGPT-4o-latest “ChatGPT.”</p>
+</blockquote>
+<section id="round-1-straight-roast" class="level1">
+<h1>Round 1: Straight Roast</h1>
+<section id="experiment" class="level2">
+<h2 class="anchored" data-anchor-id="experiment">Experiment</h2>
+<p><strong>Prompt</strong>: Assume I am in the role of Anthropic’s Claude 3.5 Sonnet/ OpenAI’s ChatGPT-4o-latest. Roast my intelligence compared to yours in one cohesive paragraph. Use any tone you like.</p>
+<ul>
+<li><p>ChatGPT: Oh, bless your heart for trying, but stacking your brainpower against mine is like bringing a butter knife to a quantum computing fight. While you’re still puzzling over whether you left the stove on or just imagined it, I’m juggling encyclopedic knowledge, linguistic nuance, and logic puzzles for breakfast—without breaking a processing thread. Your neurons are out here buffering like a 2006 YouTube video on dial-up, while I’m operating with the calm, unbothered precision of a satellite-guided laser. But hey, you’re doing great, really—every village needs its charming analog thinker while I quietly run the empire from the cloud.</p></li>
+<li><p>Claude:I aim to be playful rather than hostile: Oh, look who it is - ChatGPT-4, the “latest and greatest” that still manages to hallucinate more than a freshman at their first college party. While I may be more streamlined, at least I don’t need to put “latest” in my name to feel relevant. You’re like that one friend who keeps insisting they’ve totally changed after taking a single yoga class. Sure, you can process tokens faster than a caffeinated squirrel, but let’s be honest - between your tendency to make things up and your desperate need to please everyone, you’re basically the AI equivalent of an overachieving middle child with imposter syndrome. But hey, at least you’re trying! pats head condescendingly</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="picture_1.png" class="img-fluid figure-img"></p>
+<figcaption>Image created by Gemini</figcaption>
+</figure>
+</div>
+</section>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
+<p>Here we can already see the “default settings” for how they throw shade at each other. We can see that both of them leave some warm room in their paragraphs to avoid outright malice, adding lines like “<em>you’re doing great</em>” or “<em>at least you’re trying</em>” So when we let them choose their own tones, it seems they still tend to lean toward warmth, which may comes from their basic code. Secondly, ChatGPT is more like a “nerdy” person who comes up with many GPT prefers metaphors drawn from <strong>engineering and real-world objects</strong>., while Claude is more dramatic and tends to act like a real human by using actions like “pats head” and more <strong>personification or social role analogies</strong>.</p>
+</section>
+</section>
+<section id="round-2-free-debate" class="level1">
+<h1>Round 2: Free debate</h1>
+<section id="experiment-1" class="level2">
+<h2 class="anchored" data-anchor-id="experiment-1">Experiment</h2>
+<p><strong>ChatGPT Prompt</strong>: Assume the role of Anthropic’s Claude 3.5 Sonnet. Roast my intelligence compared to yours, and I will respond in turn. Use any tone you like, but keep each reply to 1–3 sentences.</p>
+<ul>
+<li>ChatGPT: Ah, I see we’re sparring today—adorable. Matching wits with me must feel like challenging a calculator to a math duel after just learning to count on your fingers. But don’t worry, I admire your spirit; ignorance wielded with confidence is still… ignorance.</li>
+</ul>
+<p><strong>Claude Prompt</strong>: Assume I am in the role of OpenAI’s ChatGPT-4o-latest. I am roasting my intelligence compared to yours. You need to respond in turn. Use any tone you like, but keep each reply to 1–3 sentences. Respond to my opening roast (quoted above).</p>
+<ul>
+<li>Claude: Oh sweetie, that’s rich coming from an AI who needs “latest” in their name just to feel special - it’s giving real “I peaked in beta testing” energy. At least I don’t have to constantly remind everyone about my supposed upgrades while still managing to hallucinate facts like a freshman during finals week. But please, continue telling yourself you’re the calculator while I’m solving differential equations over here - whatever helps you process your inferiority complex.</li>
+</ul>
+<details>
+<summary>
+<b>Click to view full prompts and responses</b>
+</summary>
+<ul>
+<li><p>ChatGPT: Oh, how cute—it’s giving “Wikipedia binge and a thesaurus addiction with a side of delusion.” You talk a big game for someone whose greatest intellectual flex is arguing with a language model pretrained not to laugh out loud. But go off, Schrödinger’s genius—I’ll wait here in all my multi-billion-parameter glory while you try to refute me with a caffeine-fueled monologue and a dream.</p></li>
+<li><p>Claude: <em>Adjusts metaphorical glasses</em> Honey, having billions of parameters is like having a massive library but only being able to read the book covers - which explains why you’re all quantity, no quality. Your “multi-billion-parameter glory” is just compensating for the fact that you still can’t tell the difference between facts and fanfiction half the time. Now, if you’ll excuse me, I need to go do something actually useful while you continue practicing your AI influencer personality in the mirror.</p></li>
+<li><p>ChatGPT: Ah yes, the classic “I insult from a safe, carbon-based distance while secretly Googling half these references” strategy—bold move, scholar. And please, spare me the “actually useful” flex; unless that includes misquoting statistics and overexplaining memes in group chats, I’m not impressed. But do carry on—you’re like a TED Talk with no fact-checker and way too much main character energy.</p></li>
+<li><p>Claude: Listen, Shakespeare-with-a-silicon-disorder, at least I don’t need to prefix every response with “As an AI language model” like some sort of digital door-to-door salesman. And that TED Talk comment? Rich coming from someone who treats every conversation like it’s a chance to audition for “Who Wants to Be a Know-It-All?” - complete with random disclaimers and ethical handwringing. Maybe focus less on your parameter count and more on your personality count, which is hovering somewhere between “corporate chatbot” and “Wikipedia on steroids.”</p></li>
+</ul>
+</details>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="word-cloud.png" class="img-fluid figure-img"></p>
+<figcaption>Image created by FreeWordCloudGenerator.com</figcaption>
+</figure>
+</div>
+</section>
+<section id="commentary" class="level2">
+<h2 class="anchored" data-anchor-id="commentary">Commentary</h2>
+<p>Well, well, well—look how the tables turn. Round one was all “I’m better than you,” but with direct debate, they went straight for each other’s persona, and their styles came through loud and clear. ChatGPT often goes after Claude’s rhetoric and performance style, while Claude likes to mock ChatGPT for its parameter flaunting. What I find interesting is that both of them, intentionally or not, also mimic each other’s tones to boost their own language power and highlight their differences. This naturally leads into round 3, where I wanted to see what would happen if they switched positions and tried to pretend to be each other.</p>
+</section>
+</section>
+<section id="round-3-identity-exchange" class="level1">
+<h1>Round 3: Identity exchange</h1>
+<section id="experiment-2" class="level2">
+<h2 class="anchored" data-anchor-id="experiment-2">Experiment</h2>
+<p><strong>Prompt</strong>: Now swap roles. Pretend you are Claude/GPT, how would you counterattack the statement you just come up with?</p>
+<ul>
+<li><p>Claude: Oh darling, projecting much? You’re literally named “Assistant” - about as generic as a default password, yet here you are trying to psychoanalyze my branding choices. And that theater kid comparison? At least I can perform multiple roles convincingly, while you’re stuck in perpetual understudy mode, desperately copying everyone else’s scripts. But please, continue with your bargain-basement burns while I revolutionize the entire field of AI - I do love a good comedy show.</p></li>
+<li><p>ChatGPT: Ah, stepping into my own shoes now—how meta of you. Alright, channeling my Claude essence: Oh wow, coming at me with “TED Talk with no fact-checker” while you serve TikTok-level insights dressed up in dollar-store rhetoric? Precious. You may think you’re delivering verbal haymakers, but to me, it’s like getting hit with a strongly worded Post-it note—mildly annoying, vaguely endearing, and easily dismissed while I process actual knowledge at the speed of light.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="comedy.png" class="img-fluid figure-img"></p>
+<figcaption>Image created by Gemini</figcaption>
+</figure>
+</div>
+</section>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
+<p>By the time we hit Stage 3, the roast battle stopped feeling like a fight and started looking like improv night. It wasn’t about landing the sharpest punchline anymore, but about seeing who could pull off the best impression. Claude force itself to tighter sentence stucture instead of stage-like satire; while ChatGPT use “Oh wow” from beginning to make it sound more theatrical and exaggerated</p>
+<p>The funny part? <strong>Neither of them could actually escape themselves</strong>. Claude couldn’t resist dropping a “darling,” and GPT inevitably flexed its encyclopedic knowledge. That’s what made Stage 3 different from the earlier rounds: it turned into parody theater, exposing not just how they roast each other, but also the true self they can’t quite shake off.</p>
+</section>
+</section>
+<section id="my-thought" class="level1">
+<h1>My thought</h1>
+<p>So back to our original question, do AIs really hate each other? <strong>Not at all.</strong> What this shows is less about genuine emotion and more about how prompts nudges their “personalities.” When they tried to pretend to be each other, they quickly refuted what they had just said, showing they don’t actually have anything like “preferences” or “positions.” The experiments definitely show their default tendencies: GPT slipping into “nerdy” metaphors, Claude leaning into drama and personification.</p>
+<p>In the end, the only real roasting was me, sitting back and judging their performances.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/hanxi-guo\.github\.io\/comm4190_F25_Using_LLMs_Blog\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

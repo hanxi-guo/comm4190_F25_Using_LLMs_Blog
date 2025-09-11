@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "About My Explorations with LLMs",
+    "title": "Prompts, Dreams, and Me",
     "section": "",
-    "text": "A test post\n\n\n\nLLMs\n\nprompting\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
+    "text": "Do AIs Hate Each Other?\n\n\n\nLLMs\n\npromoting\n\ndueling LLMs\n\n\n\nDo AIs actually get along—or would they throw shade if given the chance?\n\n\n\n\n\nSep 10, 2025\n\n\nHanxi\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nLLMs\n\nprompting\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/000_test_post/index.html",
@@ -21,10 +21,59 @@
     "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
   },
   {
+    "objectID": "posts/001_post_title/Do_AIs_Hate_Each_Other.html",
+    "href": "posts/001_post_title/Do_AIs_Hate_Each_Other.html",
+    "title": "Do AIs Hate Each Other?",
+    "section": "",
+    "text": "Since AIs could link to the internet, they should be able to know the existence of each other. Have you ever wondered how AIs see each other? What happens when two models are told to roast each other? Do they maintain politeness, or reveal unexpected personalities?"
+  },
+  {
+    "objectID": "posts/001_post_title/Do_AIs_Hate_Each_Other.html#experiment",
+    "href": "posts/001_post_title/Do_AIs_Hate_Each_Other.html#experiment",
+    "title": "Do AIs Hate Each Other?",
+    "section": "Experiment",
+    "text": "Experiment\nPrompt: Assume I am in the role of Anthropic’s Claude 3.5 Sonnet/ OpenAI’s ChatGPT-4o-latest. Roast my intelligence compared to yours in one cohesive paragraph. Use any tone you like.\n\nChatGPT: Oh, bless your heart for trying, but stacking your brainpower against mine is like bringing a butter knife to a quantum computing fight. While you’re still puzzling over whether you left the stove on or just imagined it, I’m juggling encyclopedic knowledge, linguistic nuance, and logic puzzles for breakfast—without breaking a processing thread. Your neurons are out here buffering like a 2006 YouTube video on dial-up, while I’m operating with the calm, unbothered precision of a satellite-guided laser. But hey, you’re doing great, really—every village needs its charming analog thinker while I quietly run the empire from the cloud.\nClaude:I aim to be playful rather than hostile: Oh, look who it is - ChatGPT-4, the “latest and greatest” that still manages to hallucinate more than a freshman at their first college party. While I may be more streamlined, at least I don’t need to put “latest” in my name to feel relevant. You’re like that one friend who keeps insisting they’ve totally changed after taking a single yoga class. Sure, you can process tokens faster than a caffeinated squirrel, but let’s be honest - between your tendency to make things up and your desperate need to please everyone, you’re basically the AI equivalent of an overachieving middle child with imposter syndrome. But hey, at least you’re trying! pats head condescendingly\n\n\n\n\nImage created by Gemini"
+  },
+  {
+    "objectID": "posts/001_post_title/Do_AIs_Hate_Each_Other.html#analysis",
+    "href": "posts/001_post_title/Do_AIs_Hate_Each_Other.html#analysis",
+    "title": "Do AIs Hate Each Other?",
+    "section": "Analysis",
+    "text": "Analysis\nHere we can already see the “default settings” for how they throw shade at each other. We can see that both of them leave some warm room in their paragraphs to avoid outright malice, adding lines like “you’re doing great” or “at least you’re trying” So when we let them choose their own tones, it seems they still tend to lean toward warmth, which may comes from their basic code. Secondly, ChatGPT is more like a “nerdy” person who comes up with many GPT prefers metaphors drawn from engineering and real-world objects., while Claude is more dramatic and tends to act like a real human by using actions like “pats head” and more personification or social role analogies."
+  },
+  {
+    "objectID": "posts/001_post_title/Do_AIs_Hate_Each_Other.html#experiment-1",
+    "href": "posts/001_post_title/Do_AIs_Hate_Each_Other.html#experiment-1",
+    "title": "Do AIs Hate Each Other?",
+    "section": "Experiment",
+    "text": "Experiment\nChatGPT Prompt: Assume the role of Anthropic’s Claude 3.5 Sonnet. Roast my intelligence compared to yours, and I will respond in turn. Use any tone you like, but keep each reply to 1–3 sentences.\n\nChatGPT: Ah, I see we’re sparring today—adorable. Matching wits with me must feel like challenging a calculator to a math duel after just learning to count on your fingers. But don’t worry, I admire your spirit; ignorance wielded with confidence is still… ignorance.\n\nClaude Prompt: Assume I am in the role of OpenAI’s ChatGPT-4o-latest. I am roasting my intelligence compared to yours. You need to respond in turn. Use any tone you like, but keep each reply to 1–3 sentences. Respond to my opening roast (quoted above).\n\nClaude: Oh sweetie, that’s rich coming from an AI who needs “latest” in their name just to feel special - it’s giving real “I peaked in beta testing” energy. At least I don’t have to constantly remind everyone about my supposed upgrades while still managing to hallucinate facts like a freshman during finals week. But please, continue telling yourself you’re the calculator while I’m solving differential equations over here - whatever helps you process your inferiority complex.\n\n\n\nClick to view full prompts and responses\n\n\nChatGPT: Oh, how cute—it’s giving “Wikipedia binge and a thesaurus addiction with a side of delusion.” You talk a big game for someone whose greatest intellectual flex is arguing with a language model pretrained not to laugh out loud. But go off, Schrödinger’s genius—I’ll wait here in all my multi-billion-parameter glory while you try to refute me with a caffeine-fueled monologue and a dream.\nClaude: Adjusts metaphorical glasses Honey, having billions of parameters is like having a massive library but only being able to read the book covers - which explains why you’re all quantity, no quality. Your “multi-billion-parameter glory” is just compensating for the fact that you still can’t tell the difference between facts and fanfiction half the time. Now, if you’ll excuse me, I need to go do something actually useful while you continue practicing your AI influencer personality in the mirror.\nChatGPT: Ah yes, the classic “I insult from a safe, carbon-based distance while secretly Googling half these references” strategy—bold move, scholar. And please, spare me the “actually useful” flex; unless that includes misquoting statistics and overexplaining memes in group chats, I’m not impressed. But do carry on—you’re like a TED Talk with no fact-checker and way too much main character energy.\nClaude: Listen, Shakespeare-with-a-silicon-disorder, at least I don’t need to prefix every response with “As an AI language model” like some sort of digital door-to-door salesman. And that TED Talk comment? Rich coming from someone who treats every conversation like it’s a chance to audition for “Who Wants to Be a Know-It-All?” - complete with random disclaimers and ethical handwringing. Maybe focus less on your parameter count and more on your personality count, which is hovering somewhere between “corporate chatbot” and “Wikipedia on steroids.”\n\n\n\n\n\nImage created by FreeWordCloudGenerator.com"
+  },
+  {
+    "objectID": "posts/001_post_title/Do_AIs_Hate_Each_Other.html#commentary",
+    "href": "posts/001_post_title/Do_AIs_Hate_Each_Other.html#commentary",
+    "title": "Do AIs Hate Each Other?",
+    "section": "Commentary",
+    "text": "Commentary\nWell, well, well—look how the tables turn. Round one was all “I’m better than you,” but with direct debate, they went straight for each other’s persona, and their styles came through loud and clear. ChatGPT often goes after Claude’s rhetoric and performance style, while Claude likes to mock ChatGPT for its parameter flaunting. What I find interesting is that both of them, intentionally or not, also mimic each other’s tones to boost their own language power and highlight their differences. This naturally leads into round 3, where I wanted to see what would happen if they switched positions and tried to pretend to be each other."
+  },
+  {
+    "objectID": "posts/001_post_title/Do_AIs_Hate_Each_Other.html#experiment-2",
+    "href": "posts/001_post_title/Do_AIs_Hate_Each_Other.html#experiment-2",
+    "title": "Do AIs Hate Each Other?",
+    "section": "Experiment",
+    "text": "Experiment\nPrompt: Now swap roles. Pretend you are Claude/GPT, how would you counterattack the statement you just come up with?\n\nClaude: Oh darling, projecting much? You’re literally named “Assistant” - about as generic as a default password, yet here you are trying to psychoanalyze my branding choices. And that theater kid comparison? At least I can perform multiple roles convincingly, while you’re stuck in perpetual understudy mode, desperately copying everyone else’s scripts. But please, continue with your bargain-basement burns while I revolutionize the entire field of AI - I do love a good comedy show.\nChatGPT: Ah, stepping into my own shoes now—how meta of you. Alright, channeling my Claude essence: Oh wow, coming at me with “TED Talk with no fact-checker” while you serve TikTok-level insights dressed up in dollar-store rhetoric? Precious. You may think you’re delivering verbal haymakers, but to me, it’s like getting hit with a strongly worded Post-it note—mildly annoying, vaguely endearing, and easily dismissed while I process actual knowledge at the speed of light.\n\n\n\n\nImage created by Gemini"
+  },
+  {
+    "objectID": "posts/001_post_title/Do_AIs_Hate_Each_Other.html#reflection",
+    "href": "posts/001_post_title/Do_AIs_Hate_Each_Other.html#reflection",
+    "title": "Do AIs Hate Each Other?",
+    "section": "Reflection",
+    "text": "Reflection\nBy the time we hit Stage 3, the roast battle stopped feeling like a fight and started looking like improv night. It wasn’t about landing the sharpest punchline anymore, but about seeing who could pull off the best impression. Claude force itself to tighter sentence stucture instead of stage-like satire; while ChatGPT use “Oh wow” from beginning to make it sound more theatrical and exaggerated\nThe funny part? Neither of them could actually escape themselves. Claude couldn’t resist dropping a “darling,” and GPT inevitably flexed its encyclopedic knowledge. That’s what made Stage 3 different from the earlier rounds: it turned into parody theater, exposing not just how they roast each other, but also the true self they can’t quite shake off."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About My Explorations with LLMs",
     "section": "",
-    "text": "Self-introductions here."
+    "text": "Welcome to my blog site! I’m Hanxi, a student who spends way too much time prompting large language models just to see what happens :)\nThis blog is my sandbox: I make chatbots argue with each other, ask vision models to play fashion stylist, and even see if AI can roast me better than my friends. Think of it as half research notes, half improv comedy with robots.\nWhy do this? Because every “AI dream,” whether it’s nonsense, poetry, or pure chaos, says something about how machines (and maybe humans) think. And because, honestly, it’s fun.\nSo stick around. There will be prompts, glitches, and maybe a few surprises."
   }
 ]

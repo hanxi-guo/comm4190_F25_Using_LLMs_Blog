@@ -1,10 +1,17 @@
 ---
 title: About My Explorations with LLMs
-image: profile.png
+image: profile_1.png
 about:
   template: jolla
 ---
 
-Self-introductions here.
+Welcome to my blog site!
+I’m Hanxi, a student who spends way too much time prompting large language models just to see what happens :)
+
+This blog is my sandbox: I make chatbots argue with each other, ask vision models to play fashion stylist, and even see if AI can roast me better than my friends. Think of it as half research notes, half improv comedy with robots.
+
+Why do this? Because every “AI dream,” whether it’s nonsense, poetry, or pure chaos, says something about how machines (and maybe humans) think. And because, honestly, it’s fun.
+
+So stick around. There will be prompts, glitches, and maybe a few surprises.
 
 

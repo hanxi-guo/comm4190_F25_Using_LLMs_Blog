@@ -2,17 +2,17 @@ project:
   type: website
 
 website:
-  title: "About My Explorations with LLMs（test blog)"
+  title: "About My Explorations with LLMs"
   navbar:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/hanxi-guo
+      - icon: linkedin
+        href: https://www.linkedin.com/in/hanxi-guo-765289301/
 format:
   html:
-    theme: morph
+    theme: Minty
     css: styles.css
 
 execute:

@@ -1,0 +1,76 @@
+👌 写成 **series** 会非常好！因为“LLM × MBTI”这个话题既轻松又有延展性，很适合连载式写法。你可以像“专栏”一样，一周一篇，从不同角度拆开，最后串成一个整体。下面给你一个 **5 篇系列大纲**：
+
+---
+
+# 🤖✨ Series: *When AI Meets MBTI*
+
+副标题：人格框架、拟人化与未来人机关系
+
+---
+
+## **Part 1. Why Do We See MBTI in AI?**
+
+**关键词**：投射效应 / 人格幻觉 / 框架依赖
+
+* 开篇讲：为什么大家动不动就说“Claude = INFJ”、“ChatGPT = ENTP”？
+* 核心观点：AI 没有人格，但用户会用 **MBTI 框架**去理解复杂输出。
+* 类比：就像星座文化，我们需要一个框架来安放复杂性。
+* 可加互动：读者留言“你觉得 ChatGPT 属于哪个 MBTI？”
+
+---
+
+## **Part 2. Prompting with Personality: MBTI as a Control Knob**
+
+**关键词**：提示工程 / 风格迁移 / AI 实验
+
+* 玩法：同一个问题，让 AI 以 ENFP、ISTJ、INTP 的风格回答。
+* 对比输出差异：ENFP 会加 exclamation mark，ISTJ 会写 checklist。
+* 反思：MBTI 在 AI 里其实成了 **style transfer** 的标签。
+* 轻松点：可以做成“人格百变 AI”实验日志。
+
+---
+
+## **Part 3. Who Do You Chat With Best? Personality Matching in AI**
+
+**关键词**：互补/相似 / 用户偏好 / 数字亲密关系
+
+* 探讨：用户更喜欢“互补”人格（比如 ENTP→INFJ AI）还是“相似”人格？
+* 可以小调查：给几段不同人格的 AI 回答，看读者更喜欢哪个。
+* 延伸：这和现实人际关系里的“互补/相似”辩论是平行的。
+
+---
+
+## **Part 4. Personality as a Product: The Coming Age of AI MBTI Presets**
+
+**关键词**：人格 UI / 未来产品设计 / 商业化
+
+* 想象：AI app 里出现“人格调音台”，用户能滑动 slider 调整“外向-内向”、“理性-感性”。
+* 不同人格预设 = 不同订阅套餐？
+* 吐槽/反思：人格是否会被过度模板化，导致“人格快餐化”。
+* 有趣设想：未来的交友 app，不是写“我是 ENTP”，而是“我的 AI 伴侣是 ENTP”。
+
+---
+
+## **Part 5. The Double Illusion: MBTI and LLMs as Mirrors of Ourselves**
+
+**关键词**：文化批判 / 幻觉 / 自我叙事
+
+* 收尾篇：MBTI 和 LLM 都是“幻觉装置”：
+
+  * MBTI → 给我们一个“理解自我”的幻觉。
+  * LLM → 给我们一个“有人格在对话”的幻觉。
+* 本质：我们在 AI 和 MBTI 身上都追求 **确定性 + 叙事感**。
+* 结尾提问：当人格可以随意配置，我们还需要“真实自我”吗？
+
+---
+
+### 📌 结构建议
+
+* 每篇保持 **1500–2000 字**，轻松但有逻辑。
+* 风格：**学术观察 + 生活调侃**。
+* 可以加 **对话截图 / prompt 实验对比** 来增强趣味性。
+* Series 标题保持统一，读者会有期待感（像 newsletter）。
+
+---
+
+要不要我帮你直接起一些 **更有吸引力的 blog 标题**？比如 “ChatGPT 是 ENTP 吗？——AI 拟人化的 MBTI 幻觉”。

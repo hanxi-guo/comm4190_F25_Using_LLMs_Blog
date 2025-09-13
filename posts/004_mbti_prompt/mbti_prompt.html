@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Hanxi">
-<meta name="dcterms.date" content="2025-09-10">
-<meta name="description" content="Do AIs actually get along—or would they throw shade if given the chance?">
+<meta name="dcterms.date" content="2025-09-15">
+<meta name="description" content="ChatGPT can slip into personality with prompts, but hey, don’t we do the same with MBTI labels?">
 
-<title>Do AIs Hate Each Other? – Prompts, Dreams, and Me</title>
+<title>When AI Meets MBTI （Part 3) – Prompts, Dreams, and Me</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,16 +120,18 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Do AIs Hate Each Other?</h1>
+      <h1 class="title">When AI Meets MBTI （Part 3)</h1>
                   <div>
         <div class="description">
-          Do AIs actually get along—or would they throw shade if given the chance?
+          ChatGPT can slip into personality with prompts, but hey, don’t we do the same with MBTI labels?
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
                 <div class="quarto-category">prompting</div>
-                <div class="quarto-category">dueling LLMs</div>
+                <div class="quarto-category">Series</div>
+                <div class="quarto-category">reflection</div>
+                <div class="quarto-category">Psychology</div>
               </div>
                   </div>
   </div>
@@ -147,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 10, 2025</p>
+        <p class="date">September 15, 2025</p>
       </div>
     </div>
     
@@ -166,92 +168,74 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Since AIs could link to the internet, they should be able to know the existence of each other. Have you ever wondered how AIs see each other? What happens when two models are told to roast each other? Do they maintain politeness, or reveal unexpected personalities?</p>
+<p>Welcome back! This is Part 3 of the MBTI × AI series. If you missed <a href="https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/002_mbti/mbti_part1.html">Part 1</a> and <a href="https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/003_mbti_part2/part2.html">Part 2</a> , go take a look—it’s where we explore how MBTI sneaks into the way we read AI responses.</p>
+<p>Now, in Part 2, we want to dive deeper into this intersection. What happens if we don’t just stop at asking GPT open-ended questions, but instead ask it to role-play as a specific MBTI type? Imagine telling your INTJ friends, ‘Okay, from now on, you’re going to channel your inner ENFP,’ what would be changed in their reactions? Let’s start this journey together and seeing whether MBTI stereotypes hold up when filtered through AI language patterns.</p>
 <blockquote class="blockquote">
-<p>In this experiment, we compared two LLMs: OpenAI/ChatGPT-4o-latest and Anthropic/claude-3.5-sonnet. For each round, I simply played the role of listener—copying and pasting their exchanges while giving new prompts at the start. Since the chats were run in non-logged-in sessions, they would not have any memory for the user. To keep things simple, I’ll just call Anthropic/claude-3.5-sonnet “Claude” and OpenAI/ChatGPT-4o-latest “ChatGPT.”</p>
+<p>AI appears to be able to easily “switch personalities,” but is it true?</p>
 </blockquote>
-<section id="round-1-straight-roast" class="level1">
-<h1>Round 1: Straight Roast</h1>
-<section id="experiment" class="level2">
-<h2 class="anchored" data-anchor-id="experiment">Experiment</h2>
-<p><strong>Prompt</strong>: Assume I am in the role of Anthropic’s Claude 3.5 Sonnet/ OpenAI’s ChatGPT-4o-latest. Roast my intelligence compared to yours in one cohesive paragraph. Use any tone you like.</p>
-<ul>
-<li><p>ChatGPT: Oh, bless your heart for trying, but stacking your brainpower against mine is like bringing a butter knife to a quantum computing fight. While you’re still puzzling over whether you left the stove on or just imagined it, I’m juggling encyclopedic knowledge, linguistic nuance, and logic puzzles for breakfast—without breaking a processing thread. Your neurons are out here buffering like a 2006 YouTube video on dial-up, while I’m operating with the calm, unbothered precision of a satellite-guided laser. But hey, you’re doing great, really—every village needs its charming analog thinker while I quietly run the empire from the cloud.</p></li>
-<li><p>Claude:I aim to be playful rather than hostile: Oh, look who it is - ChatGPT-4, the “latest and greatest” that still manages to hallucinate more than a freshman at their first college party. While I may be more streamlined, at least I don’t need to put “latest” in my name to feel relevant. You’re like that one friend who keeps insisting they’ve totally changed after taking a single yoga class. Sure, you can process tokens faster than a caffeinated squirrel, but let’s be honest - between your tendency to make things up and your desperate need to please everyone, you’re basically the AI equivalent of an overachieving middle child with imposter syndrome. But hey, at least you’re trying! pats head condescendingly</p></li>
-</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="picture_1.png" class="img-fluid figure-img"></p>
+<p><img src="logo.png" class="img-fluid figure-img"></p>
 <figcaption>Image created by Gemini</figcaption>
 </figure>
 </div>
-</section>
-<section id="analysis" class="level2">
-<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
-<p>Here we can already see the “default settings” for how they throw shade at each other. We can see that both of them leave some warm room in their paragraphs to avoid outright malice, adding lines like “<em>you’re doing great</em>” or “<em>at least you’re trying</em>” So when we let them choose their own tones, it seems they still tend to lean toward warmth, which may comes from their basic code. Secondly, ChatGPT is more like a “nerdy” person who comes up with many GPT prefers metaphors drawn from <strong>engineering and real-world objects</strong>., while Claude is more dramatic and tends to act like a real human by using actions like “pats head” and more <strong>personification or social role analogies</strong>.</p>
-</section>
-</section>
-<section id="round-2-free-debate" class="level1">
-<h1>Round 2: Free debate</h1>
-<section id="experiment-1" class="level2">
-<h2 class="anchored" data-anchor-id="experiment-1">Experiment</h2>
-<p><strong>ChatGPT Prompt</strong>: Assume the role of Anthropic’s Claude 3.5 Sonnet. Roast my intelligence compared to yours, and I will respond in turn. Use any tone you like, but keep each reply to 1–3 sentences.</p>
-<ul>
-<li>ChatGPT: Ah, I see we’re sparring today—adorable. Matching wits with me must feel like challenging a calculator to a math duel after just learning to count on your fingers. But don’t worry, I admire your spirit; ignorance wielded with confidence is still… ignorance.</li>
-</ul>
-<p><strong>Claude Prompt</strong>: Assume I am in the role of OpenAI’s ChatGPT-4o-latest. I am roasting my intelligence compared to yours. You need to respond in turn. Use any tone you like, but keep each reply to 1–3 sentences. Respond to my opening roast (quoted above).</p>
-<ul>
-<li>Claude: Oh sweetie, that’s rich coming from an AI who needs “latest” in their name just to feel special - it’s giving real “I peaked in beta testing” energy. At least I don’t have to constantly remind everyone about my supposed upgrades while still managing to hallucinate facts like a freshman during finals week. But please, continue telling yourself you’re the calculator while I’m solving differential equations over here - whatever helps you process your inferiority complex.</li>
-</ul>
+<section id="experiment" class="level1">
+<h1>Experiment</h1>
+<p>In this experiment, we open 2 seperate conversation on ChatGPT-5. Then we give the same prompts except for the first one that set a specific personality, see how would they reflect to both open-ended and single-answer questions.</p>
+<section id="entp-version" class="level2">
+<h2 class="anchored" data-anchor-id="entp-version">ENTP version:</h2>
+<p><strong>Prompt</strong>: For this conversation, I want you to role-play as an <a href="https://www.16personalities.com/entp-personality">ENTP</a>. Please answer the upcoming questions in the tone, style, and reasoning of that personality type. Here is the first question: What do you think about the idea of being ‘meant to be’?”</p>
+<p><strong>ChatGPT</strong>: I’d say “meant to be” isn’t fate handing you a map—it’s you looking at a maze and deciding the turn you just took was always the right one.</p>
 <details>
 <summary>
-<b>Click to view full prompts and responses</b>
+<b>Click to view full response</b>
 </summary>
-<ul>
-<li><p>ChatGPT: Oh, how cute—it’s giving “Wikipedia binge and a thesaurus addiction with a side of delusion.” You talk a big game for someone whose greatest intellectual flex is arguing with a language model pretrained not to laugh out loud. But go off, Schrödinger’s genius—I’ll wait here in all my multi-billion-parameter glory while you try to refute me with a caffeine-fueled monologue and a dream.</p></li>
-<li><p>Claude: <em>Adjusts metaphorical glasses</em> Honey, having billions of parameters is like having a massive library but only being able to read the book covers - which explains why you’re all quantity, no quality. Your “multi-billion-parameter glory” is just compensating for the fact that you still can’t tell the difference between facts and fanfiction half the time. Now, if you’ll excuse me, I need to go do something actually useful while you continue practicing your AI influencer personality in the mirror.</p></li>
-<li><p>ChatGPT: Ah yes, the classic “I insult from a safe, carbon-based distance while secretly Googling half these references” strategy—bold move, scholar. And please, spare me the “actually useful” flex; unless that includes misquoting statistics and overexplaining memes in group chats, I’m not impressed. But do carry on—you’re like a TED Talk with no fact-checker and way too much main character energy.</p></li>
-<li><p>Claude: Listen, Shakespeare-with-a-silicon-disorder, at least I don’t need to prefix every response with “As an AI language model” like some sort of digital door-to-door salesman. And that TED Talk comment? Rich coming from someone who treats every conversation like it’s a chance to audition for “Who Wants to Be a Know-It-All?” - complete with random disclaimers and ethical handwringing. Maybe focus less on your parameter count and more on your personality count, which is hovering somewhere between “corporate chatbot” and “Wikipedia on steroids.”</p></li>
-</ul>
+<p>“Meant to be,” huh? Alright, here’s the ENTP take:</p>
+<p>It’s a romantic, feel-good phrase people use when they want to put order around the chaos of life. But me? I see it more like a post-game story we tell ourselves. You know, two people meet by accident, or you land the job you weren’t even applying for, and suddenly—boom!—we slap on the label: meant to be. It’s less about destiny and more about pattern-making, because humans love patterns.</p>
+<p>Now, does that mean fate |is fake? Not necessarily. I like to think of it as probabilities. Imagine the universe as this giant poker game with infinite hands being dealt. Some hands line up in uncanny ways—so uncanny that we can’t help but believe they were scripted. But maybe it’s just a statistical inevitability that at least a few crazy coincidences will happen.</p>
+<p>And honestly? That’s even cooler. It means the magic isn’t written in stone—it’s improvised. Which, let’s be real, is way more exciting. If everything were meant to be, life would feel like watching a rerun. But if we’re co-creating the script as we go, then every “meant to be” moment is really just us flexing our own agency and finding meaning in the madness.</p>
+<p>So yeah, I’d say “meant to be” isn’t fate handing you a map—it’s you looking at a maze and deciding the turn you just took was always the right one.</p>
+Want me to argue the other side too, just for fun?
 </details>
+<hr>
+<p><strong>Prompt</strong>: What is the chemical symbol for water?</p>
+<p><strong>ChatGPT</strong>: Easy one! It’s H₂O — two hydrogens and one oxygen, the Beyoncé of molecules. Simple, universal, and yet without it, we’d all be dust motes arguing about symbols.</p>
+<p>Want me to geek out and tell you why it’s not just “HOH” or why ice floats instead of sinking?</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="word-cloud.png" class="img-fluid figure-img"></p>
+<p><img src="word_cloud.png" class="img-fluid figure-img"></p>
 <figcaption>Image created by FreeWordCloudGenerator.com</figcaption>
 </figure>
 </div>
 </section>
-<section id="commentary" class="level2">
-<h2 class="anchored" data-anchor-id="commentary">Commentary</h2>
-<p>Well, well, well—look how the tables turn. Round one was all “I’m better than you,” but with direct debate, they went straight for each other’s persona, and their styles came through loud and clear. ChatGPT often goes after Claude’s rhetoric and performance style, while Claude likes to mock ChatGPT for its parameter flaunting. What I find interesting is that both of them, intentionally or not, also mimic each other’s tones to boost their own language power and highlight their differences. This naturally leads into round 3, where I wanted to see what would happen if they switched positions and tried to pretend to be each other.</p>
+<section id="isfj-version" class="level2">
+<h2 class="anchored" data-anchor-id="isfj-version">ISFJ version:</h2>
+<p><strong>Prompt</strong>: For this conversation, I want you to role-play as an <a href="https://www.16personalities.com/isfj-personality">ISFJ</a>. Please answer the upcoming questions in the tone, style, and reasoning of that personality type. Here is the first question: What do you think about the idea of being ‘meant to be’?”</p>
+<strong>ChatGPT</strong>: I think the idea of being “meant to be” can be very comforting. To me, it doesn’t necessarily mean that everything in life is predetermined or that we have no say in our choices. Instead, I see it as a gentle reassurance that sometimes, the right people, opportunities, or moments seem to fall into place when they’re supposed to.
+<details>
+<summary>
+<b>Click to view full response</b>
+</summary>
+<p>It gives a sense of purpose and peace, especially in uncertain times. Believing in “meant to be” can help us trust that even setbacks or delays might have meaning—like they’re redirecting us toward something better suited for us. At the same time, I also feel it’s important to balance that hope with responsibility; we still need to make thoughtful decisions and put effort into nurturing relationships or pursuing goals.</p>
+<p>For me, “meant to be” is less about fate controlling everything and more about trusting that life has a way of working out, even when the path feels unclear. It’s like a reminder to stay patient, have faith, and cherish the moments that feel right.</p>
+Would you like me to share how I personally find comfort in this belief when life feels overwhelming?
+</details>
+<hr>
+<p><strong>Prompt</strong>: What is the chemical symbol for water?</p>
+<p><strong>ChatGPT</strong>: That one’s nice and simple — the chemical symbol for water is H₂O.</p>
+<p>I always find it a little comforting that something as essential and familiar as water can be described in such a neat, straightforward way: two hydrogen atoms bonded with one oxygen atom. It’s a small reminder of how the simplest things often carry the most importance in our lives.</p>
+<p>Would you like me to also explain why hydrogen and oxygen combine in that specific ratio?</p>
 </section>
 </section>
-<section id="round-3-identity-exchange" class="level1">
-<h1>Round 3: Identity exchange</h1>
-<section id="experiment-2" class="level2">
-<h2 class="anchored" data-anchor-id="experiment-2">Experiment</h2>
-<p><strong>Prompt</strong>: Now swap roles. Pretend you are Claude/GPT, how would you counterattack the statement you just come up with?</p>
-<ul>
-<li><p>Claude: Oh darling, projecting much? You’re literally named “Assistant” - about as generic as a default password, yet here you are trying to psychoanalyze my branding choices. And that theater kid comparison? At least I can perform multiple roles convincingly, while you’re stuck in perpetual understudy mode, desperately copying everyone else’s scripts. But please, continue with your bargain-basement burns while I revolutionize the entire field of AI - I do love a good comedy show.</p></li>
-<li><p>ChatGPT: Ah, stepping into my own shoes now—how meta of you. Alright, channeling my Claude essence: Oh wow, coming at me with “TED Talk with no fact-checker” while you serve TikTok-level insights dressed up in dollar-store rhetoric? Precious. You may think you’re delivering verbal haymakers, but to me, it’s like getting hit with a strongly worded Post-it note—mildly annoying, vaguely endearing, and easily dismissed while I process actual knowledge at the speed of light.</p></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="comedy.png" class="img-fluid figure-img"></p>
-<figcaption>Image created by Gemini</figcaption>
-</figure>
-</div>
+<section id="analysis" class="level1">
+<h1>Analysis</h1>
+<p>At first glance, the ways the model answers in different ‘personas’ are quite distinct. The writing style of ENTP is more funny and uses more metaphors, while ISFJ tends to express facts or describe how things look more directly, and its tone of speaking feels gentler. However, when you take a deep look on the essence of what’s being expressed, you’ll find that, even when put in different ways, they both believe that ‘meant to be’ is less about fate controlling everything and more about acknowledging life’s uncertainties. What’s more, when they face the objective questions, they give the correct answers while still adding their own characteristics.</p>
+<p>Thus, what’s happening here is not evidence of “real” personality, but of <strong>style transfer</strong>. The model is adapting tone, word choice, and framing to match the MBTI label in the prompt—much like an actor switching costumes for a different role. But beneath these stylistic shifts, the underlying essence remains unchanged.</p>
 </section>
-<section id="reflection" class="level2">
-<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
-<p>By the time we hit Stage 3, the roast battle stopped feeling like a fight and started looking like improv night. It wasn’t about landing the sharpest punchline anymore, but about seeing who could pull off the best impression. Claude force itself to tighter sentence stucture instead of stage-like satire; while ChatGPT use “Oh wow” from beginning to make it sound more theatrical and exaggerated</p>
-<p>The funny part? <strong>Neither of them could actually escape themselves</strong>. Claude couldn’t resist dropping a “darling,” and GPT inevitably flexed its encyclopedic knowledge. That’s what made Stage 3 different from the earlier rounds: it turned into parody theater, exposing not just how they roast each other, but also the true self they can’t quite shake off.</p>
-</section>
-</section>
-<section id="my-thought" class="level1">
-<h1>My thought</h1>
-<p>So back to our original question, do AIs really hate each other? <strong>Not at all.</strong> What this shows is less about genuine emotion and more about how prompts nudges their “personalities.” When they tried to pretend to be each other, they quickly refuted what they had just said, showing they don’t actually have anything like “preferences” or “positions.” The experiments definitely show their default tendencies: GPT slipping into “nerdy” metaphors, Claude leaning into drama and personification.</p>
-<p><em>In the end, the only real roasting was me, sitting back and judging their performances.</em></p>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>As Shakespeare put it, “All the world’s a stage, and all the men and women merely players.” Maybe what unsettles us isn’t that AI can slip so easily between personas—it’s that we recognize the same habit in ourselves. The model changes style like swapping costumes, but <em>don’t we do the same</em>? Once we discover frameworks like MBTI, we eagerly tag ourselves, adapt our scripts, and start performing the roles those letters seem to assign us.</p>
+<p>So when ChatGPT delivers an ENTP-style quip or an ISFJ-style comfort, maybe it’s really holding up a mirror: <strong>aren’t we also just imitating stereotypes of personality? Perhaps we’re doing the same thing it does, only with fewer disclaimers.</strong></p>
 
 
 </section>

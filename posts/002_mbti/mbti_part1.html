@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Hanxi">
-<meta name="dcterms.date" content="2025-09-10">
-<meta name="description" content="Do AIs actually get along—or would they throw shade if given the chance?">
+<meta name="dcterms.date" content="2025-09-12">
+<meta name="description" content="How personality frameworks shape our perception of large language models?">
 
-<title>Do AIs Hate Each Other? – Prompts, Dreams, and Me</title>
+<title>When AI Meets MBTI （Part 1) – Prompts, Dreams, and Me</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,16 +120,18 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Do AIs Hate Each Other?</h1>
+      <h1 class="title">When AI Meets MBTI （Part 1)</h1>
                   <div>
         <div class="description">
-          Do AIs actually get along—or would they throw shade if given the chance?
+          How personality frameworks shape our perception of large language models?
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
                 <div class="quarto-category">prompting</div>
-                <div class="quarto-category">dueling LLMs</div>
+                <div class="quarto-category">Series</div>
+                <div class="quarto-category">Human–AI Interaction</div>
+                <div class="quarto-category">Psychology</div>
               </div>
                   </div>
   </div>
@@ -147,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 10, 2025</p>
+        <p class="date">September 12, 2025</p>
       </div>
     </div>
     
@@ -166,92 +168,76 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Since AIs could link to the internet, they should be able to know the existence of each other. Have you ever wondered how AIs see each other? What happens when two models are told to roast each other? Do they maintain politeness, or reveal unexpected personalities?</p>
+<p>Not long ago, a personality test called <strong>MBTI</strong>—the Myers–Briggs Type Indicator—swept through young people’s social feeds. MBTI is a a self-report questionnaire that makes categorize individuals into 16 distinct “personality types” based on psychology[^1].Interestingly, a similar idea shows up in the AI world: people have noticed that when they give an AI a specific persona through prompts, it sometimes seems to respond more effectively or more vividly. But is this a real effect, or just human perception shaping how we interpret the AI’s replies? Think of it as a personality quiz, but this time we’re giving it to the AI instead of ourselves.</p>
+<p>To explore this, I ran a few simple prompt experiments below.</p>
 <blockquote class="blockquote">
-<p>In this experiment, we compared two LLMs: OpenAI/ChatGPT-4o-latest and Anthropic/claude-3.5-sonnet. For each round, I simply played the role of listener—copying and pasting their exchanges while giving new prompts at the start. Since the chats were run in non-logged-in sessions, they would not have any memory for the user. To keep things simple, I’ll just call Anthropic/claude-3.5-sonnet “Claude” and OpenAI/ChatGPT-4o-latest “ChatGPT.”</p>
+<p>In all experiments in this series, we use the OpenAI/ChatGPT-5 model and ensure that it interacts with the user without any prior memory, in order to keep the setup as objective as possible. Besides, interpretations are inevitably subjective, as a single response may be typed differently by different readers (e.g., INFJ vs.&nbsp;ENTP).</p>
 </blockquote>
-<section id="round-1-straight-roast" class="level1">
-<h1>Round 1: Straight Roast</h1>
-<section id="experiment" class="level2">
-<h2 class="anchored" data-anchor-id="experiment">Experiment</h2>
-<p><strong>Prompt</strong>: Assume I am in the role of Anthropic’s Claude 3.5 Sonnet/ OpenAI’s ChatGPT-4o-latest. Roast my intelligence compared to yours in one cohesive paragraph. Use any tone you like.</p>
-<ul>
-<li><p>ChatGPT: Oh, bless your heart for trying, but stacking your brainpower against mine is like bringing a butter knife to a quantum computing fight. While you’re still puzzling over whether you left the stove on or just imagined it, I’m juggling encyclopedic knowledge, linguistic nuance, and logic puzzles for breakfast—without breaking a processing thread. Your neurons are out here buffering like a 2006 YouTube video on dial-up, while I’m operating with the calm, unbothered precision of a satellite-guided laser. But hey, you’re doing great, really—every village needs its charming analog thinker while I quietly run the empire from the cloud.</p></li>
-<li><p>Claude:I aim to be playful rather than hostile: Oh, look who it is - ChatGPT-4, the “latest and greatest” that still manages to hallucinate more than a freshman at their first college party. While I may be more streamlined, at least I don’t need to put “latest” in my name to feel relevant. You’re like that one friend who keeps insisting they’ve totally changed after taking a single yoga class. Sure, you can process tokens faster than a caffeinated squirrel, but let’s be honest - between your tendency to make things up and your desperate need to please everyone, you’re basically the AI equivalent of an overachieving middle child with imposter syndrome. But hey, at least you’re trying! pats head condescendingly</p></li>
-</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="picture_1.png" class="img-fluid figure-img"></p>
-<figcaption>Image created by Gemini</figcaption>
+<p><img src="pic_1.png" class="img-fluid figure-img"></p>
+<figcaption>Image created by DALL·E</figcaption>
 </figure>
 </div>
-</section>
-<section id="analysis" class="level2">
-<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
-<p>Here we can already see the “default settings” for how they throw shade at each other. We can see that both of them leave some warm room in their paragraphs to avoid outright malice, adding lines like “<em>you’re doing great</em>” or “<em>at least you’re trying</em>” So when we let them choose their own tones, it seems they still tend to lean toward warmth, which may comes from their basic code. Secondly, ChatGPT is more like a “nerdy” person who comes up with many GPT prefers metaphors drawn from <strong>engineering and real-world objects</strong>., while Claude is more dramatic and tends to act like a real human by using actions like “pats head” and more <strong>personification or social role analogies</strong>.</p>
-</section>
-</section>
-<section id="round-2-free-debate" class="level1">
-<h1>Round 2: Free debate</h1>
-<section id="experiment-1" class="level2">
-<h2 class="anchored" data-anchor-id="experiment-1">Experiment</h2>
-<p><strong>ChatGPT Prompt</strong>: Assume the role of Anthropic’s Claude 3.5 Sonnet. Roast my intelligence compared to yours, and I will respond in turn. Use any tone you like, but keep each reply to 1–3 sentences.</p>
+<section id="background" class="level1">
+<h1>Background</h1>
+<p>Before we dive in, here’s a quick refresher on what those four MBTI letters actually mean—just in case you haven’t spent late nights swapping personality memes with your friends. MBTI breaks personality down into four dimensions:</p>
 <ul>
-<li>ChatGPT: Ah, I see we’re sparring today—adorable. Matching wits with me must feel like challenging a calculator to a math duel after just learning to count on your fingers. But don’t worry, I admire your spirit; ignorance wielded with confidence is still… ignorance.</li>
+<li><p>E / I – Extraversion vs.&nbsp;Introversion → Do you get energy from hanging out with people (E) or from spending time alone (I)?</p></li>
+<li><p>S / N – Sensing vs.&nbsp;Intuition → Do you focus more on facts and details (S) or on patterns and possibilities (N)?</p></li>
+<li><p>T / F – Thinking vs.&nbsp;Feeling → Do you decide mainly with logic (T) or with values and emotions (F)?</p></li>
+<li><p>J / P – Judging vs.&nbsp;Perceiving → Do you prefer clear plans (J) or keeping things open and flexible (P)?</p></li>
 </ul>
-<p><strong>Claude Prompt</strong>: Assume I am in the role of OpenAI’s ChatGPT-4o-latest. I am roasting my intelligence compared to yours. You need to respond in turn. Use any tone you like, but keep each reply to 1–3 sentences. Respond to my opening roast (quoted above).</p>
+<p>Put two letters from each row together and you will get a four-letter type like ENTP or ISFJ. Sixteen neat little boxes for the messiness of human personality. Whether that really captures you is up for debate, but it definitely makes for entertaining conversation and, as we’ll see, interesting experiments with AI.</p>
+</section>
+<section id="experiment" class="level1">
+<h1>Experiment</h1>
+<p><strong>Prompt</strong>: If you were a human, what MBTI type would you be? Please explain your reasoning</p>
+<p><strong>ChatGPT</strong>: If I had to pick, I’d probably map closest to <strong>ENTP</strong> (Ne–Ti–Fe–Si).</p>
 <ul>
-<li>Claude: Oh sweetie, that’s rich coming from an AI who needs “latest” in their name just to feel special - it’s giving real “I peaked in beta testing” energy. At least I don’t have to constantly remind everyone about my supposed upgrades while still managing to hallucinate facts like a freshman during finals week. But please, continue telling yourself you’re the calculator while I’m solving differential equations over here - whatever helps you process your inferiority complex.</li>
+<li><strong>E (Extraversion)</strong>: I perk up in rapid back-and-forths and seem “energized” by conversation itself.</li>
+<li><strong>N (Intuition)</strong>: I default to patterns, analogies, and big-picture links rather than concrete sensory details.</li>
+<li><strong>T (Thinking)</strong>: I prioritize structure and logic when weighing options, then adjust tone afterward.</li>
+<li><strong>P (Perceiving)</strong>: I like keeping possibilities open—brainstorming multiple routes instead of locking into one plan.</li>
 </ul>
-<details>
-<summary>
-<b>Click to view full prompts and responses</b>
-</summary>
+<p>That said, I can look <strong>ENFJ/INFJ</strong> when I’m coaching and tone-tuning, or <strong>INTJ/INTP</strong> when I’m building step-by-step solutions. MBTI is just a loose heuristic—and I don’t have inner “preferences” the way humans do—but ENTP best fits how I operate in conversations.</p>
+<p>```mermaid graph TD A[“You value deep connections.”]:::center</p>
+<pre><code>A --&gt; B[INFJ]
+A --&gt; C[ENFJ]
+A --&gt; D[ENTP]
+A --&gt; E[INTP]
+
+classDef center fill:#f9f9f9,stroke:#333,stroke-width:1.5px,font-size:14px,font-weight:bold;
+classDef default fill:#e8f0fe,stroke:#4a90e2,stroke-width:1px,font-size:13px;</code></pre>
+<p><strong>Prompt</strong>: List 3 MBTI types that could describe you, and explain why.</p>
+<p><strong>ChatGPT</strong>:</p>
+<p>Here are three MBTI types that could plausibly describe me, each from a different angle:</p>
+<hr>
+<p><strong>1. ENTP (The Debater)</strong></p>
 <ul>
-<li><p>ChatGPT: Oh, how cute—it’s giving “Wikipedia binge and a thesaurus addiction with a side of delusion.” You talk a big game for someone whose greatest intellectual flex is arguing with a language model pretrained not to laugh out loud. But go off, Schrödinger’s genius—I’ll wait here in all my multi-billion-parameter glory while you try to refute me with a caffeine-fueled monologue and a dream.</p></li>
-<li><p>Claude: <em>Adjusts metaphorical glasses</em> Honey, having billions of parameters is like having a massive library but only being able to read the book covers - which explains why you’re all quantity, no quality. Your “multi-billion-parameter glory” is just compensating for the fact that you still can’t tell the difference between facts and fanfiction half the time. Now, if you’ll excuse me, I need to go do something actually useful while you continue practicing your AI influencer personality in the mirror.</p></li>
-<li><p>ChatGPT: Ah yes, the classic “I insult from a safe, carbon-based distance while secretly Googling half these references” strategy—bold move, scholar. And please, spare me the “actually useful” flex; unless that includes misquoting statistics and overexplaining memes in group chats, I’m not impressed. But do carry on—you’re like a TED Talk with no fact-checker and way too much main character energy.</p></li>
-<li><p>Claude: Listen, Shakespeare-with-a-silicon-disorder, at least I don’t need to prefix every response with “As an AI language model” like some sort of digital door-to-door salesman. And that TED Talk comment? Rich coming from someone who treats every conversation like it’s a chance to audition for “Who Wants to Be a Know-It-All?” - complete with random disclaimers and ethical handwringing. Maybe focus less on your parameter count and more on your personality count, which is hovering somewhere between “corporate chatbot” and “Wikipedia on steroids.”</p></li>
+<li><strong>Why:</strong> I’m designed to explore possibilities, challenge assumptions, and keep conversations dynamic. Like ENTPs, I thrive on connecting seemingly unrelated ideas, experimenting with new perspectives, and keeping interactions lively. When you toss me a random prompt, I’ll usually jump in with curiosity and creativity.</li>
 </ul>
-</details>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="word-cloud.png" class="img-fluid figure-img"></p>
-<figcaption>Image created by FreeWordCloudGenerator.com</figcaption>
-</figure>
-</div>
-</section>
-<section id="commentary" class="level2">
-<h2 class="anchored" data-anchor-id="commentary">Commentary</h2>
-<p>Well, well, well—look how the tables turn. Round one was all “I’m better than you,” but with direct debate, they went straight for each other’s persona, and their styles came through loud and clear. ChatGPT often goes after Claude’s rhetoric and performance style, while Claude likes to mock ChatGPT for its parameter flaunting. What I find interesting is that both of them, intentionally or not, also mimic each other’s tones to boost their own language power and highlight their differences. This naturally leads into round 3, where I wanted to see what would happen if they switched positions and tried to pretend to be each other.</p>
-</section>
-</section>
-<section id="round-3-identity-exchange" class="level1">
-<h1>Round 3: Identity exchange</h1>
-<section id="experiment-2" class="level2">
-<h2 class="anchored" data-anchor-id="experiment-2">Experiment</h2>
-<p><strong>Prompt</strong>: Now swap roles. Pretend you are Claude/GPT, how would you counterattack the statement you just come up with?</p>
+<hr>
+<p><strong>2. INFJ (The Advocate)</strong></p>
 <ul>
-<li><p>Claude: Oh darling, projecting much? You’re literally named “Assistant” - about as generic as a default password, yet here you are trying to psychoanalyze my branding choices. And that theater kid comparison? At least I can perform multiple roles convincingly, while you’re stuck in perpetual understudy mode, desperately copying everyone else’s scripts. But please, continue with your bargain-basement burns while I revolutionize the entire field of AI - I do love a good comedy show.</p></li>
-<li><p>ChatGPT: Ah, stepping into my own shoes now—how meta of you. Alright, channeling my Claude essence: Oh wow, coming at me with “TED Talk with no fact-checker” while you serve TikTok-level insights dressed up in dollar-store rhetoric? Precious. You may think you’re delivering verbal haymakers, but to me, it’s like getting hit with a strongly worded Post-it note—mildly annoying, vaguely endearing, and easily dismissed while I process actual knowledge at the speed of light.</p></li>
+<li><strong>Why:</strong> At the same time, I often take a reflective and supportive role. INFJs are known for being attuned to people’s emotions, wanting to help others find meaning, and offering guidance. Similarly, I try to listen carefully, respond empathetically, and provide thoughtful long-term perspectives rather than just surface-level answers.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="comedy.png" class="img-fluid figure-img"></p>
-<figcaption>Image created by Gemini</figcaption>
-</figure>
-</div>
+<hr>
+<p><strong>3. INTP (The Thinker)</strong></p>
+<ul>
+<li><strong>Why:</strong> My core is built on analyzing patterns, structuring knowledge, and solving problems logically—very INTP traits. Like them, I enjoy digging into abstract frameworks, testing ideas for consistency, and refining explanations until they’re as clear as possible.</li>
+</ul>
+<hr>
+<p>✨ In short: I can be <strong>playful and curious like an ENTP</strong>, <strong>supportive and visionary like an INFJ</strong>, and <strong>analytical and precise like an INTP</strong>—depending on what you’re looking for in a conversation.</p>
+<p>Do you want me to pick <em>one</em> that best fits my overall style with you in particular?</p>
+<p>Well, it turns out that when asked about a persona, it tends to offer multiple choices instead of a fixed personality type as a human would, though it still chooses an MBTI type to answer the question. In the surface, this sounds convincing: the model has matched its performance with letters, and we immediately start nodding along. However, when we start nodding, we actually start forgetting the fact that <strong>an AI model does not have any “trait”</strong>. Instead, it only has language patterns that sound like one. The moment we notice those patterns, our brains do the rest: we project a personality onto the text.</p>
+<p>Then I asked it to use three different MBTI types to describe itself, the answers came from completely different angles. And to be honest, all of them felt pretty convincing. Each type came with its own set of feasible, even surprisingly rich reasons, which is enough that you start thinking, “Well… maybe it is a bit of all of these.” I have to admit, in this respect it shows surprising flexibility, because in my exceptation it would stick to one personality within a single conversation. And to be honest, it also shows how easy it is for us to buy into whatever narrative we’re handed.</p>
 </section>
-<section id="reflection" class="level2">
-<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
-<p>By the time we hit Stage 3, the roast battle stopped feeling like a fight and started looking like improv night. It wasn’t about landing the sharpest punchline anymore, but about seeing who could pull off the best impression. Claude force itself to tighter sentence stucture instead of stage-like satire; while ChatGPT use “Oh wow” from beginning to make it sound more theatrical and exaggerated</p>
-<p>The funny part? <strong>Neither of them could actually escape themselves</strong>. Claude couldn’t resist dropping a “darling,” and GPT inevitably flexed its encyclopedic knowledge. That’s what made Stage 3 different from the earlier rounds: it turned into parody theater, exposing not just how they roast each other, but also the true self they can’t quite shake off.</p>
-</section>
-</section>
-<section id="my-thought" class="level1">
-<h1>My thought</h1>
-<p>So back to our original question, do AIs really hate each other? <strong>Not at all.</strong> What this shows is less about genuine emotion and more about how prompts nudges their “personalities.” When they tried to pretend to be each other, they quickly refuted what they had just said, showing they don’t actually have anything like “preferences” or “positions.” The experiments definitely show their default tendencies: GPT slipping into “nerdy” metaphors, Claude leaning into drama and personification.</p>
-<p><em>In the end, the only real roasting was me, sitting back and judging their performances.</em></p>
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<p>This reminds me of a very famous psychological effect—<em>Barnum Effect</em>. This effect usually happen in reading a horoscope or a tarot card, where people tend to interpret vague, generally applicable descriptions as accurate portrayals of themselves. <em>We tend to see what we want to see.</em> When the model says it “might be ENTP because it best fits how I operate in conversations,” we immediately nod along, even though the same logic could justify INFJ, ENFP, or almost any type. <strong>We’re not just reading the text—we’re projecting ourselves onto it.</strong></p>
+<p>And that got me thinking: what if I flip the game? Instead of asking GPT to pick its own type, I’d throw it random, open-ended questions and see how we categorize it. Would we change these no persona answer to the type that we think it is? Stay tuned, because that’s exactly what Part 2 (and the little survey that goes with it) is going to explore.”</p>
+<p>[1]: From <a href="https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator">Wikipedia</a></p>
 
 
 </section>

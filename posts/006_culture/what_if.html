@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Hanxi">
-<meta name="dcterms.date" content="2025-09-12">
-<meta name="description" content="How personality frameworks shape our perception of large language models?">
+<meta name="dcterms.date" content="2025-09-19">
+<meta name="description" content="What happens when you force an AI to explain blockchain like Socrates, or describe cloud computing in the style of Shakespeare?">
 
-<title>When AI Meets MBTI （Part 1) – Prompts, Dreams, and Me</title>
+<title>What If Shakespeare Talked About Cloud Computing? – Prompts, Dreams, and Me</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,18 +120,18 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">When AI Meets MBTI （Part 1)</h1>
+      <h1 class="title">What If Shakespeare Talked About Cloud Computing?</h1>
                   <div>
         <div class="description">
-          How personality frameworks shape our perception of large language models?
+          What happens when you force an AI to explain blockchain like Socrates, or describe cloud computing in the style of Shakespeare?
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
                 <div class="quarto-category">prompting</div>
-                <div class="quarto-category">Series</div>
-                <div class="quarto-category">Human–AI Interaction</div>
-                <div class="quarto-category">Psychology</div>
+                <div class="quarto-category">cross-culture</div>
+                <div class="quarto-category">translation</div>
+                <div class="quarto-category">reflection</div>
               </div>
                   </div>
   </div>
@@ -149,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 12, 2025</p>
+        <p class="date">September 19, 2025</p>
       </div>
     </div>
     
@@ -168,73 +168,61 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Not long ago, a personality test called <strong>MBTI</strong>—the Myers–Briggs Type Indicator—swept through young people’s social feeds. MBTI is a a self-report questionnaire that makes categorize individuals into 16 distinct “personality types” based on psychology[^1].Interestingly, a similar idea shows up in the AI world: people have noticed that when they give an AI a specific persona through prompts, it sometimes seems to respond more effectively or more vividly. But is this a real effect, or just human perception shaping how we interpret the AI’s replies? Think of it as a personality quiz, but this time we’re giving it to the AI instead of ourselves.</p>
-<p>To explore this, I ran a few simple prompt experiments below.</p>
+<p>In the “Post-AI Era,” new concepts and buzzwords seem to pop up every day, constantly challenging our basic knowledge. You might catch the meaning of something like “Generative AI” right away, but when it comes to terms like “Digital Twin,” “Crypto,” or “NFT,” it’s not so easy to guess what they actually mean just from the words themselves. These days, people are pretty used to turning to AIs like ChatGPT or Claude for quick explanations, and you can even set the tone — whether you want it simple and friendly, or professional and serious.</p>
+<p>Back in high school, my English teacher used to give us a role-playing exercise: we had to pick a historical figure and retell stories from the textbook as if we were that person. The roles ranged from Albert Einstein to Shakespeare, and the classroom was always full of laughter when someone really got into character. I can still picture those moments clearly.</p>
+<p>That memory made me wonder: what if we asked AI to explain modern concepts, but through the voice of a historical figure? What kind of twist would that create? Out of curiosity, I picked a few words that I honestly didn’t know the meaning of at first, and decided to run this little experiment.</p>
 <blockquote class="blockquote">
-<p>In all experiments in this series, we use the OpenAI/ChatGPT-5 model and ensure that it interacts with the user without any prior memory, in order to keep the setup as objective as possible. Besides, interpretations are inevitably subjective, as a single response may be typed differently by different readers (e.g., INFJ vs.&nbsp;ENTP).</p>
+<p>All AI responses shown here were generated with OpenAI’s ChatGPT-5. These prompts reflect my learning curve, which might be a little behind yours and if that happen…thanks for waiting up😉</p>
 </blockquote>
-<p><img src="pic_1.png" class="img-fluid" alt="Image created by DALL·E"> [^1]: From <a href="https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator">Wikipedia</a></p>
-<section id="background" class="level1">
-<h1>Background</h1>
-<p>Before we dive in, here’s a quick refresher on what those four MBTI letters actually mean—just in case you haven’t spent late nights swapping personality memes with your friends. MBTI breaks personality down into four dimensions:</p>
-<ul>
-<li><p>E / I – Extraversion vs.&nbsp;Introversion → Do you get energy from hanging out with people (E) or from spending time alone (I)?</p></li>
-<li><p>S / N – Sensing vs.&nbsp;Intuition → Do you focus more on facts and details (S) or on patterns and possibilities (N)?</p></li>
-<li><p>T / F – Thinking vs.&nbsp;Feeling → Do you decide mainly with logic (T) or with values and emotions (F)?</p></li>
-<li><p>J / P – Judging vs.&nbsp;Perceiving → Do you prefer clear plans (J) or keeping things open and flexible (P)?</p></li>
-</ul>
-<p>Put two letters from each row together and you will get a four-letter type like ENTP or ISFJ. Sixteen neat little boxes for the messiness of human personality. Whether that really captures you is up for debate, but it definitely makes for entertaining conversation and, as we’ll see, interesting experiments with AI.</p>
-</section>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="title.png" class="img-fluid figure-img"></p>
+<figcaption>Image by <a href="https://www.recraft.ai">Recraft.ai</a></figcaption>
+</figure>
+</div>
 <section id="experiment" class="level1">
 <h1>Experiment</h1>
-<p><strong>Prompt</strong>: If you were a human, what MBTI type would you be? Please explain your reasoning</p>
-<p><strong>ChatGPT</strong>: If I had to pick, I’d probably map closest to <strong>ENTP</strong> (Ne–Ti–Fe–Si).</p>
-<ul>
-<li><strong>E (Extraversion)</strong>: I perk up in rapid back-and-forths and seem “energized” by conversation itself.</li>
-<li><strong>N (Intuition)</strong>: I default to patterns, analogies, and big-picture links rather than concrete sensory details.</li>
-<li><strong>T (Thinking)</strong>: I prioritize structure and logic when weighing options, then adjust tone afterward.</li>
-<li><strong>P (Perceiving)</strong>: I like keeping possibilities open—brainstorming multiple routes instead of locking into one plan.</li>
-</ul>
-<p>That said, I can look <strong>ENFJ/INFJ</strong> when I’m coaching and tone-tuning, or <strong>INTJ/INTP</strong> when I’m building step-by-step solutions. MBTI is just a loose heuristic—and I don’t have inner “preferences” the way humans do—but ENTP best fits how I operate in conversations.</p>
-<pre class="mermaid"><code>graph TD
-    A["You value deep connections."]:::center
-
-    A --&gt; B[INFJ]
-    A --&gt; C[ENFJ]
-    A --&gt; D[ENTP]
-    A --&gt; E[INTP]
-
-    classDef center fill:#f9f9f9,stroke:#333,stroke-width:1.5px,font-size:14px,font-weight:bold;
-    classDef default fill:#e8f0fe,stroke:#4a90e2,stroke-width:1px,font-size:13px;</code></pre>
-<p><strong>Prompt</strong>: List 3 MBTI types that could describe you, and explain why.</p>
-<p><strong>ChatGPT</strong>:</p>
-<p>Here are three MBTI types that could plausibly describe me, each from a different angle:</p>
+<p>Prompt: Explain blockchain as if you were a character in a Shakespeare play. Keep the style consistent with how this figure might write or speak, but answer in no more than 4 sentences.</p>
+<p>ChatGPT: Marry, good friend, picture thou a chain of scrolls, each link bound fast with seals none can break nor counterfeit. Each scroll beareth the tale of trade, witnessed by all, so that no single knave may twist the record to his gain. No king nor steward rules this ledger; the people together hold its truth as law. Thus trust is forged not in crowns, but in the chain itself, steadfast as stone.</p>
+<details>
+<summary>
+<b>Click to view full conversations</b>
+</summary>
+<p>Prompt: I still do not understand, could you explain it more clearly or give me an example?</p>
+<p>ChatGPT: Then hear me once more, in simple kind:</p>
+<p>Imagine each villager hath a little book. When thou buy’st bread, all villagers at once write down, “<em>John gave coin, Mary gave loaf.</em>” If John later tries to lie, saying, “I ne’er gave coin,” the others open their books and say, “Nay, here ’tis writ by all of us.”</p>
+<p>This, good friend, is blockchain—truth kept not by one master’s word, but by the agreement of the many.</p>
+<p>Wouldst thou like me to show thee a real-world use, such as how folk employ it with Bitcoin or even for tracking jewels and goods?</p>
+<p>Prompt: So basically it is an agreement or a type of coins?</p>
+<p>ChatGPT: In sooth, ’tis both, though in different guise.</p>
+<p>The blockchain itself is but the great book of truth, where all agree on what is writ. From this book may spring many things—aye, coins like Bitcoin, which live upon its pages, but also records of land, jewels, or promises. So the chain is the stage, and the coin but one play acted upon it.</p>
+<p>Prompt: But what is the meaning or the usefulness of it?</p>
+<p>ChatGPT: Good question, friend. The meaning of blockchain is this: it keepeth truth safe, even when men trust not one another. Its usefulness is that no king, banker, nor single steward need guard the record—so trade, contracts, or treasures may be kept honest by the many. Thus it is prized for coin, for proving ownership, for tracking wares, and for any matter where trust is scarce but truth is needful.</p>
+<p>Prompt: Then why it called <em>blockchain</em>?</p>
+<p>ChatGPT: Because, good friend, each record of deeds is gather’d into a block—a chest of writings sealed shut. When one chest is fill’d, it is lock’d and bound unto the last, making a chain of chests, each fasten’d tight to the other. Thus, “blockchain” is born: a chain of blocks, one after the next, where none may be tamper’d without breaking the whole.</p>
+</details>
 <hr>
-<p><strong>1. ENTP (The Debater)</strong></p>
-<ul>
-<li><strong>Why:</strong> I’m designed to explore possibilities, challenge assumptions, and keep conversations dynamic. Like ENTPs, I thrive on connecting seemingly unrelated ideas, experimenting with new perspectives, and keeping interactions lively. When you toss me a random prompt, I’ll usually jump in with curiosity and creativity.</li>
-</ul>
-<hr>
-<p><strong>2. INFJ (The Advocate)</strong></p>
-<ul>
-<li><strong>Why:</strong> At the same time, I often take a reflective and supportive role. INFJs are known for being attuned to people’s emotions, wanting to help others find meaning, and offering guidance. Similarly, I try to listen carefully, respond empathetically, and provide thoughtful long-term perspectives rather than just surface-level answers.</li>
-</ul>
-<hr>
-<p><strong>3. INTP (The Thinker)</strong></p>
-<ul>
-<li><strong>Why:</strong> My core is built on analyzing patterns, structuring knowledge, and solving problems logically—very INTP traits. Like them, I enjoy digging into abstract frameworks, testing ideas for consistency, and refining explanations until they’re as clear as possible.</li>
-</ul>
-<hr>
-<p>✨ In short: I can be <strong>playful and curious like an ENTP</strong>, <strong>supportive and visionary like an INFJ</strong>, and <strong>analytical and precise like an INTP</strong>—depending on what you’re looking for in a conversation.</p>
-<p>Do you want me to pick <em>one</em> that best fits my overall style with you in particular?</p>
-<p>Well, it turns out that when asked about a persona, it tends to offer multiple choices instead of a fixed personality type as a human would, though it still chooses an MBTI type to answer the question. In the surface, this sounds convincing: the model has matched its performance with letters, and we immediately start nodding along. However, when we start nodding, we actually start forgetting the fact that <strong>an AI model does not have any “trait”</strong>. Instead, it only has language patterns that sound like one. The moment we notice those patterns, our brains do the rest: we project a personality onto the text.</p>
-<p>Then I asked it to use three different MBTI types to describe itself, the answers came from completely different angles. And to be honest, all of them felt pretty convincing. Each type came with its own set of feasible, even surprisingly rich reasons, which is enough that you start thinking, “Well… maybe it is a bit of all of these.” I have to admit, in this respect it shows surprising flexibility, because in my exceptation it would stick to one personality within a single conversation. And to be honest, it also shows how easy it is for us to buy into whatever narrative we’re handed.</p>
+<p>Well, by the time I finally got to the answer, I more or less understood what blockchain means. Based on my own take, it’s kind of like a discrete database that’s supervised by many people at once — not the textbook definition, but close enough to capture how I understood it.Honestly though, it wasn’t easy. Compared with chatting with a “normal” AI, trying to learn through Shakespeare’s grand speeches made the whole process a lot harder for me. Still, that’s exactly what makes the experiment fun. So, let’s move into part two and hear what Albert Einstein might have to say.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pict.webp" class="img-fluid figure-img"></p>
+<figcaption>IImage created by DALL·E</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>In part 2, I copy and paste the conversation as before at first and give the following prompts in a brand new converstion. The reply was pretty long, so I optionally trimmed a few parts that felt less important, without touching the AI’s tone or style.</p>
+</blockquote>
+<p>Prompt: Pretend you are Albert Einstein. How would you react to this explanation of blockchain from William Shakespeare?Keep the style consistent with how this figure might write or speak.</p>
+<p>ChatGPT: Ah, my dear Shakespeare, your poetry doth sparkle like the stars above—yet I must confess, as a physicist, I hunger for a little more precision! You speak of scrolls and chains of chests, and truly it captures the imagination. But I would say, in simpler terms: this “blockchain” is like a great ledger where each new page is stamped with the proof of all before it, so that the past cannot be altered without destroying the present. In this, I see a kind of relativity of trust—where certainty emerges not from one authority, but from the agreement of the many observers, just as reality itself is shaped by the consensus of measurements.</p>
+<p>Prompt: Can you explain your last sentence more?</p>
+<p>ChatGPT: I was drawing a bridge betwixt blockchain and my own science. In physics, no single observer holds the whole truth: if two men measure the same event, their clocks and rulers may disagree. Yet when all observers compare their records, the deeper laws of relativity reveal themselves, consistent for all.</p>
+<p>So too with blockchain: no single scribe may be trusted alone, but when all keep their own copy and agree, truth emerges unshaken.</p>
 </section>
-<section id="summary" class="level1">
-<h1>Summary</h1>
-<p>This reminds me of a very famous psychological effect—<em>Barnum Effect</em>. This effect usually happen in reading a horoscope or a tarot card, where people tend to interpret vague, generally applicable descriptions as accurate portrayals of themselves. <em>We tend to see what we want to see.</em> When the model says it “might be ENTP because it best fits how I operate in conversations,” we immediately nod along, even though the same logic could justify INFJ, ENFP, or almost any type. <strong>We’re not just reading the text—we’re projecting ourselves onto it.</strong></p>
-<p>And that got me thinking: what if I flip the game? Instead of asking GPT to pick its own type, I’d throw it random, open-ended questions and see how we categorize it. Would we change these no persona answer to the type that we think it is? Stay tuned, because that’s exactly what Part 2 (and the little survey that goes with it) is going to explore.”</p>
-<p>[1]: From <a href="https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator">Wikipedia</a></p>
+<section id="takeaways" class="level1">
+<h1>Takeaways</h1>
+<p>It seems Shakespeare turned it into poetry, Einstein tied it to relativity, and there I was in the middle just trying to keep up. To my surprise, Einstein felt much kinder than I’d imagined, and he linked blockchain to relativity in a way I never would have thought of — since part of me worried he might notice I was struggling to follow at beginning. The AI, for its part, really gave it a shot: tossing in “Wouldst thou” and “here ’tis” for Shakespeare, and shaping a physics talk for Einstein.</p>
+<p>So, did I finally understand blockchain better? Well… kind of. At least Einstein made it clearer than Shakespeare did (sorry Will). But honestly, what stuck with me more was how fun it felt to let these two “giants” step in and argue about something they could never have imagined. Learning felt less like studying and more like eavesdropping on history’s coolest debate. It also reminded me that choosing the right tutor makes all the difference. So next time I get stuck on a concept, maybe I’ll just ask the inventor themselves — Karl Pearson can walk me through Pearson’s Correlation Coefficient, and Thomas Bayes can help me untangle Bayes’ Theorem.</p>
+<p><strong>The only downside? No one’s around to autograph my textbook.</strong></p>
 
 
 </section>

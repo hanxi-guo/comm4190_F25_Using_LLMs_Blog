@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Hanxi">
+<meta name="dcterms.date" content="2025-09-17">
+<meta name="description" content="When the bridge of authority disappears, how will AI ‘transfer’ language?">
 
-<title>Prompts, Dreams, and Me</title>
+<title>Lost in Translation: AI After MIIS – Prompts, Dreams, and Me</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-dc797a86ed2ad7be54980078017504d0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-dc797a86ed2ad7be54980078017504d0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,79 +71,21 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Prompts, Dreams, and Me</span>
     </a>
   </div>
@@ -153,7 +96,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -176,266 +119,129 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Prompts, Dreams, and Me</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Lost in Translation: AI After MIIS</h1>
+                  <div>
+        <div class="description">
+          When the bridge of authority disappears, how will AI ‘transfer’ language?
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">prompting</div>
+                <div class="quarto-category">talk with AI</div>
+                <div class="quarto-category">cross-culture</div>
+                <div class="quarto-category">translation</div>
+                <div class="quarto-category">News</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Hanxi </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 17, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Y3Jvc3MtY3VsdHVyZQ==">cross-culture <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZHVlbGluZyUyMExMTXM=">dueling LLMs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SHVtYW4lRTIlODAlOTNBSSUyMEludGVyYWN0aW9u">Human–AI Interaction <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(6)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TmV3cw==">News <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(6)</span></div><div class="category" data-category="UHN5Y2hvbG9neQ==">Psychology <span class="quarto-category-count">(3)</span></div><div class="category" data-category="cmVmbGVjdGlvbg==">reflection <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U2VyaWVz">Series <span class="quarto-category-count">(3)</span></div><div class="category" data-category="U3RhdGlzdGljcw==">Statistics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U3VydmV5">Survey <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGFsayUyMHdpdGglMjBBSQ==">talk with AI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dHJhbnNsYXRpb24=">translation <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ3RhbGslMjB3aXRoJTIwQUklMkNjcm9zcy1jdWx0dXJlJTJDdHJhbnNsYXRpb24lMkNOZXdz" data-listing-date-sort="1758067200000" data-listing-file-modified-sort="1758177048411" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1083">
-<div class="thumbnail"><a href="./posts/005_translate/translate.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/005_translate/moon.jpeg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/005_translate/translate.html" class="no-external">Lost in Translation: AI After MIIS</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGFsayUyMHdpdGglMjBBSQ=='); return false;">talk with AI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y3Jvc3MtY3VsdHVyZQ=='); return false;">cross-culture</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dHJhbnNsYXRpb24='); return false;">translation</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TmV3cw=='); return false;">News</div>
-
+<p>Recently, a news story went viral across social media worldwide. The <em>Middlebury Institute of International Studies at Monterey, MIIS</em> will cease admitting graduate students in June 2027. Monterey is not well known to the general public, but it is well-known in the translation industry and is known as the <strong>“Harvard of translation”</strong>.</p>
+<p>Undoubtedly, there are many reasons behind MIIS’s planned phase-out. Nonetheless, a widely circulating view holds that advances in AI and the resulting contraction of translation roles—played an indirect part.</p>
+<p>This made me wonder how much AI actually factored into the decision to wind down the programs, so I ran a small experiment and have a small “discussion” with it.</p>
+<p>So, let’s get started!</p>
+<blockquote class="blockquote">
+<p>All AI responses shown here were generated with OpenAI’s ChatGPT-5. The views expressed here are my own and do not represent the official position of OpenAI, MIIS, or any other institution.</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="moon.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Image by xiaohongshu user: 116918972</figcaption>
+</figure>
 </div>
-<div class="delink listing-description"><a href="./posts/005_translate/translate.html" class="no-external">
-<p>When the bridge of authority disappears, how will AI ‘transfer’ language?</p>
-</a></div>
+<section id="experiment-part-1" class="level1">
+<h1>Experiment (part 1)</h1>
+<p>The sentence which we selected here is the last sentence of <em>The Great Gatsby</em> by F. Scott Fitzgerald, it reads: “<em>So we beat on, boats against the current, borne back ceaselessly into the past</em>.” The order of languages used for translation here is based on the list of languages ranked by number of native speakers<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, except for the original one which is English :)</p>
+<blockquote class="blockquote">
+<p>Each translation is happened in a brand new conversation to avoid memory-lead bias. We only keep the original sentence and its translation, removing any unnecessary AI-generated content manually.</p>
+</blockquote>
+<p>Prompt: “So we beat on, boats against the current, borne back ceaselessly into the past.” translate this into Mandarin Chinese</p>
+<p>ChatGPT: 于是我们不断前行，如同逆流而上的船只，被无情地推回到过去。</p>
+<details>
+<summary>
+<b>Click to view full translation process</b>
+</summary>
+<ul>
+<li>ChatGPT: Así seguimos adelante, como barcos que navegan contra la corriente, arrastrados sin piedad hacia el pasado. (Spanish)</li>
+<li>ChatGPT: और हम इसी तरह आगे बढ़ते रहते हैं, जैसे नावें धारा के विपरीत चलती हों, बेरहमी से अतीत की ओर खींची जाती हुईं। (Hindi)</li>
+<li>ChatGPT: E aqui seguimos em frente, como barcos que navegam contra a corrente, impiedosamente arrastados em direção ao passado. (Portuguese)</li>
+<li>ChatGPT: এবং এভাবেই আমরা এগিয়ে চলি, যেন স্রোতের বিপরীতে চলা নৌকাগুলো, নির্মমভাবে অতীতের দিকে টেনে নেওয়া হয়। (Bengali)</li>
+<li>ChatGPT: И вот так мы идём вперёд, словно лодки против течения, безжалостно увлекаемые назад — в прошлое (Russian)</li>
+</ul>
+</details>
+<p>Finally after 5 translations, we translate the sentence from Russian back to English:</p>
+<p>ChatGPT: <strong>And so we go on, like boats against the current, relentlessly borne back into the past.</strong></p>
+<p>Well, it seems that the AI hardly altered the basic meaning of the original. Without explicitly pointing it out, let’s imagine using Google Translate instead and running the same five-pass translation (through the same languages). The final output we would get is: <strong>“Therefore, we continue to go against the tide and constantly delve into the past.”</strong> Clearly, compared with the AI’s result, this version shows much greater semantic drift.</p>
+<p>Seeing this contrast made me pause. Seeing that gap made me wonder if it’s about how they handle context or just how they weigh words, but it made me curious enough to ask the AI itself. Afterall, it’s right here with me.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="boat.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Image by DeepAI</figcaption>
+</figure>
 </div>
-<div class="metadata">
-<a href="./posts/005_translate/translate.html" class="no-external">
-<div class="listing-date">
-Sep 17, 2025
-</div>
-<div class="listing-author">
-Hanxi
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ1NlcmllcyUyQ3JlZmxlY3Rpb24lMkNQc3ljaG9sb2d5" data-listing-date-sort="1757894400000" data-listing-file-modified-sort="1758177048406" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1126">
-<div class="thumbnail"><a href="./posts/004_mbti_prompt/mbti_prompt.html" class="no-external">
+</section>
+<section id="experiment-part-2" class="level1">
+<h1>Experiment (part 2)</h1>
+<p>Prompt: Using the same sentence “So we beat on, boats against the current, borne back ceaselessly into the past”, I tried multiple rounds of translation across five languages. The AI’s final version came out as “And so we go on, like boats against the current, relentlessly borne back into the past”, while Google Translate gave “Therefore, we continue to go against the tide and constantly delve into the past.” How do you see this contrast? Which version do you think captures the original better?</p>
+<blockquote class="blockquote">
+<p>The answer is long here so I summarize them and keep its main points by myself.</p>
+</blockquote>
+<p>ChatGPT: The AI version preserves more of the imagery, mood, and inevitability of Fitzgerald’s line, even though it slightly weakens the opening action. Google’s version distorts the sense of struggle by making it seem like people choose to “delve” into the past.</p>
+<p>Prompt: Why do you think Google Translate ended up drifting so much compared to you?</p>
+<p>ChatGPT: Google Translate doesn’t optimize for style, cadence, or emotional charge — it optimizes for clarity and neutrality. Since you did multiple rounds across five languages, GT had to keep “making sense” at each step. ButI’m not tied to literal alignment — Fitzgerald’s line is metaphorical and rhythmic, and I’m trained to weigh tone, rhythm, and imagery when rephrasing.</p>
+<p>Prompt:Do you think it’s about how each system handles meaning across multiple passes?</p>
+<p>ChatGPT: Yes, it’s very much about how each system encodes and transfers meaning across multiple passes. GT keeps what is most common across languages, while I try to keep the deeper meaning and style.”</p>
+<p>Prompt: Are small drifts in wording harmless, or do they change the soul of the text? ChatGPT: It really depends on what kind of text you’re dealing with. Small drifts aren’t always harmless. In practical text, they may not matter; in literary text, they can change the soul — <em>because in literature, the words are the meaning, not just carriers of it</em>.</p>
+<p>Not sure how you feel about it when you read this result of the experiment, but personally I really like its response in the last question. In instructions, news, or casual writing, small drifts are often harmless. Whether it says “keep going” or “continue on” makes little difference， because the meaning survives, and the reader’s experience is unaffected. But in novels, in poetry, in letters, in those pieces of literature humans write because they are too full of pain or too full of joy to stay silent, words truly carry their meaning.</p>
+</section>
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<p>So maybe the real lesson isn’t about winning or losing in translation, but about what gets carried forward. When I first read about MIIS winding down, the easy explanation was “AI killed translation.” But after this small experiment, I think the story is more complicated.The meaning and role of translation change depending on the text itself: in practical documents, accuracy and clarity are usually enough, while in literary works the texture of rhythm, emotion, and imagery cannot be ignored. That’s why we cannot simply conclude that AI is better than Google Translate, or even better than human beings. Human translators often understand first, then re-voice the work so its soul can live again in another language; AI, most of the time, an only infinitely approach that soul.</p>
+<p>And maybe that’s the point: AI can infinitely approach the soul, but never quite touch it. The question is, when words cross borders, do we settle for “close enough”… or do we keep chasing the echo that makes them alive?</p>
 
-<p class="card-img-top"><img src="posts/004_mbti_prompt/logo.png"  class="thumbnail-image card-img"/></p>
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/004_mbti_prompt/mbti_prompt.html" class="no-external">When AI Meets MBTI （Part 3)</a>
-</h3>
-<div class="listing-categories">
+</section>
 
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
-<div class="listing-category" onclick="window.quartoListingCategory('U2VyaWVz'); return false;">Series</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmVmbGVjdGlvbg=='); return false;">reflection</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHN5Y2hvbG9neQ=='); return false;">Psychology</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/004_mbti_prompt/mbti_prompt.html" class="no-external">
-<p>ChatGPT can slip into personality with prompts, but hey, don’t we do the same with MBTI labels?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/004_mbti_prompt/mbti_prompt.html" class="no-external">
-<div class="listing-date">
-Sep 15, 2025
-</div>
-<div class="listing-author">
-Hanxi
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ1NlcmllcyUyQ1N0YXRpc3RpY3MlMkNQc3ljaG9sb2d5JTJDU3VydmV5" data-listing-date-sort="1757808000000" data-listing-file-modified-sort="1758177048404" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="861">
-<div class="thumbnail"><a href="./posts/003_mbti_part2/part2.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/003_mbti_part2/pic_2.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003_mbti_part2/part2.html" class="no-external">When AI Meets MBTI （Part 2)</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2VyaWVz'); return false;">Series</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U3RhdGlzdGljcw=='); return false;">Statistics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHN5Y2hvbG9neQ=='); return false;">Psychology</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U3VydmV5'); return false;">Survey</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/003_mbti_part2/part2.html" class="no-external">
-<p>In Part 2, GPT stays silent on its identity and the fun begins when we project one onto it</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/003_mbti_part2/part2.html" class="no-external">
-<div class="listing-date">
-Sep 14, 2025
-</div>
-<div class="listing-author">
-Hanxi
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ1NlcmllcyUyQ0h1bWFuJUUyJTgwJTkzQUklMjBJbnRlcmFjdGlvbiUyQ1BzeWNob2xvZ3k=" data-listing-date-sort="1757635200000" data-listing-file-modified-sort="1758177048400" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1099">
-<div class="thumbnail"><a href="./posts/002_mbti/mbti_part1.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/002_mbti/pic_1.png" alt="Image created by DALL·E"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_mbti/mbti_part1.html" class="no-external">When AI Meets MBTI （Part 1)</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2VyaWVz'); return false;">Series</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SHVtYW4lRTIlODAlOTNBSSUyMEludGVyYWN0aW9u'); return false;">Human–AI Interaction</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHN5Y2hvbG9neQ=='); return false;">Psychology</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/002_mbti/mbti_part1.html" class="no-external">
-<p>How personality frameworks shape our perception of large language models?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/002_mbti/mbti_part1.html" class="no-external">
-<div class="listing-date">
-Sep 12, 2025
-</div>
-<div class="listing-author">
-Hanxi
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2R1ZWxpbmclMjBMTE1z" data-listing-date-sort="1757462400000" data-listing-file-modified-sort="1758177048392" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1472">
-<div class="thumbnail"><a href="./posts/001_post_title/Do_AIs_Hate_Each_Other.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/001_post_title/picture_1.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_post_title/Do_AIs_Hate_Each_Other.html" class="no-external">Do AIs Hate Each Other?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZHVlbGluZyUyMExMTXM='); return false;">dueling LLMs</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/001_post_title/Do_AIs_Hate_Each_Other.html" class="no-external">
-<p>Do AIs actually get along—or would they throw shade if given the chance?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/001_post_title/Do_AIs_Hate_Each_Other.html" class="no-external">
-<div class="listing-date">
-Sep 10, 2025
-</div>
-<div class="listing-author">
-Hanxi
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1758177048392" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail"><a href="./posts/000_test_post/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/000_test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post/index.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">logic</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/000_test_post/index.html" class="no-external">
-<p>An example post from a Jupyter notebook</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+<ol>
+<li id="fn1"><p>From <a href="https://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers">Wikipedia</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

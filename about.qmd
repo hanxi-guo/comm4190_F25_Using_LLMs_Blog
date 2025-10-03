@@ -9,7 +9,7 @@ Welcome to my blog site!
 
 I’m Hanxi, a CS & Statistics student, but my real thesis is: “How many ways can I confuse a chatbot before it confuses me?” :D
 
-This blog is my sandbox, and the experiments here are my toys. Sometimes the results read like research notes, sometimes like improv sketches, and often like a messy, lovable mix of both. It’s my way of turning technical ideas into things people actually want to read. If the robots ever gain consciousness, this will probably be Exhibit A in their complaint against me.
+This blog is my sandbox. Sometimes the results read like research notes, sometimes like improv sketches, and often like a messy, lovable mix of both. It’s my way of turning technical ideas into things people actually want to read. If the robots ever gain consciousness, this will probably be Exhibit A in their complaint against me.
 
 Why do this? Because every “AI dream,” whether it’s nonsense, poetry, or pure chaos, says something about how machines (and maybe humans) think. And because, honestly, it’s fun.
 

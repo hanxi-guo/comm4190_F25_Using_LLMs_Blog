@@ -2,13 +2,16 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/012_gpt_buying/Untitled.html",
+      "/posts/009_ages/age.html",
+      "/posts/007_emotion/meter.html",
       "/posts/006_culture/what_if.html",
       "/posts/005_translate/translate.html",
       "/posts/004_mbti_prompt/mbti_prompt.html",
       "/posts/003_mbti_part2/part2.html",
       "/posts/002_mbti/mbti_part1.html",
       "/posts/001_post_title/Do_AIs_Hate_Each_Other.html",
-      "/posts/000_test_post/index.html"
+      "/posts/008_class_activity/index.html"
     ]
   }
 ]

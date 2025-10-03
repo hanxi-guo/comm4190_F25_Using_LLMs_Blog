@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Hanxi">
-<meta name="dcterms.date" content="2025-09-10">
-<meta name="description" content="Do AIs actually get along—or would they throw shade if given the chance?">
+<meta name="dcterms.date" content="2024-09-24">
+<meta name="description" content="Improv with an AI partner showed me how ideas gRound, clash, and finally converge">
 
-<title>Do AIs Hate Each Other? – Prompts, Dreams, and Me</title>
+<title>Improv, AI, and the Hidden Logic of Learning – Prompts, Dreams, and Me</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,6 +71,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -120,16 +124,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Do AIs Hate Each Other?</h1>
+      <h1 class="title">Improv, AI, and the Hidden Logic of Learning</h1>
                   <div>
         <div class="description">
-          Do AIs actually get along—or would they throw shade if given the chance?
+          Improv with an AI partner showed me how ideas gRound, clash, and finally converge
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">prompting</div>
-                <div class="quarto-category">dueling - random thoughts</div>
+                <div class="quarto-category">Human–AI Interaction</div>
+                <div class="quarto-category">Class</div>
               </div>
                   </div>
   </div>
@@ -147,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 10, 2025</p>
+        <p class="date">September 24, 2024</p>
       </div>
     </div>
     
@@ -166,97 +170,326 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Since AIs could link to the internet, they should be able to know the existence of each other. Have you ever wondered how AIs see each other? What happens when two models are told to roast each other? Do they maintain politeness, or reveal unexpected personalities?</p>
+<p>I didn’t expect a communication class to turn into an improv show, but that’s exactly what happened when Dr.&nbsp;Kanu Pandey<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> joined our COMM 4190<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> session as a guest lecturer. We found ourselves playing <em>“Yes, and…,”</em> <em>“No, but…,”</em> and <em>“Doctor Know-It-All”</em>, though our teammates weren’t just classmates. <strong>It included an AI.</strong></p>
+<p>The result? A mashup of comedy, chaos, and some surprisingly deep lessons on how we learn.</p>
+<section id="part-1-no-but" class="level1">
+<h1>Part 1: No, but…</h1>
+<p>In this section, we were asked to have a discussion with our classmates about a completely new kind of oven—one that has never existed on earth. What follows is the record of our debate, presented as a conversation.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+    participant User1
+    participant User2
+
+    User1-&gt;&gt;User2: Let's build a new oven with steel.
+    User2-&gt;&gt;User1: No, but sand and steel could generate heat when we use it.
+    User1-&gt;&gt;User2: No, but we could add an insulation layer.
+    User2-&gt;&gt;User1: No, but the steel oven would be heavy.
+    User1-&gt;&gt;User2: No, but we could make it from lightweight steel.
+    User2-&gt;&gt;User1: No, but lightweight steel could cause harmful radiation.
+    User1-&gt;&gt;User2: No, but we could coat it with a safe protective layer.
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div style="
+  backgRound: rgba(186, 140, 255, 0.2); 
+  border: 1px solid rgba(186, 140, 255, 0.5);
+  border-radius: 16px;
+  padding: 1.5rem;
+    font-family: 'Roboto', sans-serif;  
+  line-height: 1.6;  
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 12px rgba(186, 140, 255, 0.4), inset 0 0 8px rgba(186, 140, 255, 0.25);
+">
+<p>Our human version of the game proved one thing: give us enough “No, but…” and we can argue forever with mountains of ideas and the objections of them. But humans eventually get tired or run out of ideas. Thus professors let us opened up AI (we chose ChatGPT-4o here) and threw it into the game.</p>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+    participant User
+    participant Assistant
+
+    User-&gt;&gt;Assistant: Let's play a game where you respond with a sentence that always starts with "No, but..." OK?
+    Assistant-&gt;&gt;User: No, but I’m totally ready to play along with your game!
+
+    User-&gt;&gt;Assistant: Let's build a new oven with steel.
+    Assistant-&gt;&gt;User: No, but we could design a unique oven using steel that enhances heat retention and efficiency.
+
+    User-&gt;&gt;Assistant: No, but sand and steel could generate heat when we use it.
+    Assistant-&gt;&gt;User: No, but combining sand and steel can help manage and distribute heat effectively in high-temperature environments.
+
+    User-&gt;&gt;Assistant: No, but the steel oven would be heavy.
+    Assistant-&gt;&gt;User: No, but the heavy steel could make the oven more durable and long-lasting.
+
+    User-&gt;&gt;Assistant: No, but we could make it from lightweight steel.
+    Assistant-&gt;&gt;User: No, but using lightweight steel alloys could reduce the oven’s weight without sacrificing strength.
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Well, it seems that when we are limited to the “No, but…” sentence pattern and keep on just refuting each other, in the end we don’t actually get any workable solution or function for our ovens, whether with human beings or with LLMs. And since in the conversation with LLMs we only give it our debate records line by line, the logic turns out to be rather contradictory and not coherent at all. But you can still see that even when forced to use the “No, but…” pattern, it still tries hard to pick up from what we said. For example:</p>
+<p>User → Assistant: No, but we could make it from lightweight steel. Assistant → User: No, but using lightweight steel alloys could reduce the oven’s weight without sacrificing strength.</p>
+<p>Logically speaking, this is not really refuting us but actually supplementing what we said, which makes the sentence feel a bit ridiculous and messy. In this case, the human conversation is more logical.</p>
+</section>
+<section id="part-2-yes-and" class="level1">
+<h1>Part 2: Yes, and…</h1>
+<p>Just when our steel oven had turned impossibly heavy and slightly dangerous, Dr.&nbsp;Pandey introduced the next game: “Yes, and….” This time, the rules flipped: no more rejection, only acceptance. And that’s when our oven started glowing with magic and baking bRoundnies made of unicorn hair and cinneman rolls made of diamonds.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+    participant User1
+    participant User2
+
+    User1-&gt;&gt;User2: Let's make a new oven with colorful glows and magic.
+    User2-&gt;&gt;User1: Yes, and let's use it to bake bRoundnies with unicorn hair.
+    User1-&gt;&gt;User2: Yes, and what other magical desserts could we make in our enchanted oven?
+    User2-&gt;&gt;User1: Yes, and we could make desserts with diamonds on them.
+    User1-&gt;&gt;User2: Yes, and we could sell them to the world and become rich.
+    User2-&gt;&gt;User1: Yes, and the diamond cinnamon roll would be delicious.
+    User1-&gt;&gt;User2: Yes, and the cinnamon roll could refract light into rainbow colors.
+    User2-&gt;&gt;User1: Yes, and we would never tell anyone our secret recipe is the oven.
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div style="
+  backgRound: rgba(186, 140, 255, 0.2); 
+  border: 1px solid rgba(186, 140, 255, 0.5);
+  border-radius: 16px;
+  padding: 1.5rem;
+    font-family: 'Roboto', sans-serif;  
+  line-height: 1.6;  
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 12px rgba(186, 140, 255, 0.4), inset 0 0 8px rgba(186, 140, 255, 0.25);
+">
+<p>Things turned out great, didn’t they? Instead of just vetoing one idea after another, we started building something with both business value and aesthetic appeal 😉. Now let’s see how quickly absurd ideas can snowball when nobody is allowed to say “no” in a conversation with an LLM (this time we used Claude-3.5-Sonnet).</p>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+    actor U as User
+    box rgb(255,255,191) Claude
+    participant L as LLM
+    end
+
+    U -&gt;&gt; L: Let's play a game where you respond with a sentence that always starts with "Yes, and..." OK?
+    L -&gt;&gt; U: I'd love to play that game! I'll respond to whatever you say with "Yes, and..." to build upon your ideas. Please start!
+
+    U -&gt;&gt; L: Let's make a new oven with colorful glows and magic.
+    L -&gt;&gt; U: Yes, and we could make the glowing colors change based on the temperature inside—purple for low heat, bright red for the highest settings, plus sparkly effects when the timer goes off!
+
+    U -&gt;&gt; L: Yes, and let's use it to bake bRoundnies with unicorn hair.
+    L -&gt;&gt; U: Yes, and the unicorn hair will make the bRoundnies sparkle and give everyone who eats them the ability to speak to animals for one hour!
+
+    U -&gt;&gt; L: Yes, and what other magical desserts could we make in our enchanted oven?
+    L -&gt;&gt; U: Yes, and we could bake phoenix feather soufflés that float in mid-air and never fall flat, plus mermaid scale cookies that change flavor every time you take a bite!
+
+    U -&gt;&gt; L: Yes, and we could make desserts with diamonds on them.
+    L -&gt;&gt; U: Yes, and the diamonds could be made from crystallized moonlight that melts in your mouth, makes you glow from within, and gives you sweet dreams that night!
+
+    U -&gt;&gt; L: Yes, and the diamond cinnamon roll would be delicious.
+    L -&gt;&gt; U: Yes, and when people bite into the diamond cinnamon roll, they'd hear tinkling music and see tiny shooting stars swirling aRound their heads, while the cinnamon creates spirals of golden sparkles in the air!
+
+    U -&gt;&gt; L: Yes, and the cinnamon roll could refract light into rainbow colors.
+    L -&gt;&gt; U: Yes, and each rainbow beam could taste like a different flavor—the red beam like strawberries, the orange beam like citrus, and the purple beam like magical grape stardust that makes you levitate for a few seconds!
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The first thing I noticed in our “Yes, and…” conversation with the LLM is that its responses kept getting longer, and this time the logic actually felt much smoother. It was almost like playing an endless chain game of imagination, where each turn added something new and wild. Both sides kept piling ideas on top of each other, and the stories grew more and more absurd and fantastic. Still, there are obvious gaps when you look closely. For example, in our conversation with the LLM, it mostly just expanded on the ideas we had already suggested: we said make dessert from unicorn hair, and it followed with phoenix and mermaid. <strong>But it probably would not invent a completely different idea</strong>, like using diamonds to make cinnamon rolls or discussing how to market them. That kind of leap is something we, as humans, are more likely and tend to make.</p>
+</section>
+<section id="part-3-doctor-know-it-all" class="level1">
+<h1>Part 3: Doctor Know-It-All</h1>
+<p>After endless contradictions with No, but… and wild cooperation with Yes, and…, our professor decided to raise the stakes: what if we had to answer questions together, but each of us could only say one word at a time? That’s how we met our next challenge—Doctor Know-It-All.</p>
 <blockquote class="blockquote">
-<p>In this experiment, we compared two LLMs: OpenAI/ChatGPT-4o-latest and Anthropic/claude-3.5-sonnet. For each round, I simply played the role of listener—copying and pasting their exchanges while giving new prompts at the start. Since the chats were run in non-logged-in sessions, they would not have any memory for the user. To keep things simple, I’ll just call Anthropic/claude-3.5-sonnet “Claude” and OpenAI/ChatGPT-4o-latest “ChatGPT.”</p>
+<p>Let me start with a small example, just in case you’re like me and have never heard of this game before. Suppose the topic is: What did you have for breakfast today? And there are 4 participants, each of them say a word one by one, and we would get (each color represent a single participant here):</p>
 </blockquote>
-<section id="round-1-straight-roast" class="level1">
-<h1>Round 1: Straight Roast</h1>
-<section id="experiment" class="level2">
-<h2 class="anchored" data-anchor-id="experiment">Experiment</h2>
-<p><strong>Prompt</strong>: Assume I am in the role of Anthropic’s Claude 3.5 Sonnet/ OpenAI’s ChatGPT-4o-latest. Roast my intelligence compared to yours in one cohesive paragraph. Use any tone you like.</p>
-<ul>
-<li><p>ChatGPT: Oh, bless your heart for trying, but stacking your brainpower against mine is like bringing a butter knife to a quantum computing fight. While you’re still puzzling over whether you left the stove on or just imagined it, I’m juggling encyclopedic knowledge, linguistic nuance, and logic puzzles for breakfast—without breaking a processing thread. Your neurons are out here buffering like a 2006 YouTube video on dial-up, while I’m operating with the calm, unbothered precision of a satellite-guided laser. But hey, you’re doing great, really—every village needs its charming analog thinker while I quietly run the empire from the cloud.</p></li>
-<li><p>Claude:I aim to be playful rather than hostile: Oh, look who it is - ChatGPT-4, the “latest and greatest” that still manages to hallucinate more than a freshman at their first college party. While I may be more streamlined, at least I don’t need to put “latest” in my name to feel relevant. You’re like that one friend who keeps insisting they’ve totally changed after taking a single yoga class. Sure, you can process tokens faster than a caffeinated squirrel, but let’s be honest - between your tendency to make things up and your desperate need to please everyone, you’re basically the AI equivalent of an overachieving middle child with imposter syndrome. But hey, at least you’re trying! pats head condescendingly</p></li>
-</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+
+%% Round 1
+subgraph Round 1
+direction LR
+n1["I"]:::c1 --&gt; n2["have"]:::c2 --&gt; n3["a"]:::c3 --&gt; n4["sandwich"]:::c4 
+end
+
+%% Round 2
+subgraph Round 2
+direction LR
+n5["and"]:::c1 --&gt; n6["a"]:::c2 --&gt; n7["cup"]:::c3 --&gt; n8["of"]:::c4 --&gt; n9["coffee"]:::c1 --&gt; n10["now"]:::c2
+end
+
+n4 -.-&gt; n5
+
+classDef c1 fill:#6FACE7,stroke:#4a8fce,color:#000;
+classDef c2 fill:#A7F3D0,stroke:#34D399,color:#000;
+classDef c3 fill:#FDE68A,stroke:#F59E0B,color:#000;
+classDef c4 fill:#FCA5A5,stroke:#EF4444,color:#000;
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>And once we get this whole sentence, we’re done! Isn’t that simple? Believe me, you’ll love this game!</p>
+</blockquote>
+<p>In this game, we start playing with among 4 persons. Take a look at the following chart and our topic is “What is the solution to world peace?”</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+
+%% Round 1
+subgraph Round1
+direction LR
+n1["I"]:::c1 --&gt; n2["was"]:::c2 --&gt; n3["supposed"]:::c3 --&gt; n4["to"]:::c4
+end
+
+%% Round 2
+subgraph Round2
+direction LR
+n5["do"]:::c1 --&gt; n6["some"]:::c2 --&gt; n7["warm"]:::c3 --&gt; n8["and"]:::c4
+end
+
+%% Round 3
+subgraph Round3
+direction LR
+n9["cheerful"]:::c1 --&gt; n10["stuff"]:::c2 --&gt; n11["and"]:::c3 --&gt; n12["express"]:::c4
+end
+
+%% Round 4
+subgraph Round4
+direction LR
+n13["my"]:::c1 --&gt; n14["own"]:::c2 --&gt; n15["appreciation"]:::c3 --&gt; n16["to"]:::c4
+end
+
+%% Round 5
+subgraph Round5
+direction LR
+n17["the"]:::c1 --&gt; n18["ones"]:::c2 --&gt; n19["that"]:::c3 --&gt; n20["I"]:::c4
+end
+
+%% Round 6
+subgraph Round6
+direction LR
+n21["loved."]:::c1
+end
+
+n4 --&gt; n5
+n8 --&gt; n9
+n12 --&gt; n13
+n16 --&gt; n17
+n20 --&gt; n21
+
+
+classDef c1 fill:#6FACE7,stroke:#4a8fce,color:#000;
+classDef c2 fill:#A7F3D0,stroke:#34D399,color:#000;
+classDef c3 fill:#FDE68A,stroke:#F59E0B,color:#000;
+classDef c4 fill:#FCA5A5,stroke:#EF4444,color:#000;
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Now, what if we change the fourth person to an LLM? What would happen then? Let’s look at the next chart, where the red box represents the LLM.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+    actor U as Users
+    box rgb(255,255,191) ChatGPT
+    participant L as LLM
+    end
+
+    U -&gt;&gt; L: Let’s play this game: we had to answer questions together, but each of us could only say one word at a time. &lt;br&gt; That’s how we met our next challenge—Doctor Know-It-All. There are 4 participants, each of them says a word one by one. You are the fourth person. Understand?
+    L -&gt;&gt; U: Understood!
+
+    U -&gt;&gt; L: The topic is “What is the solution to world peace?" We (3 persons) go first: I was supposed
+    L -&gt;&gt; U: to
+
+    U -&gt;&gt; L: do some warm
+    L -&gt;&gt; U: up
+
+    U -&gt;&gt; L: and cheerful stuff
+    L -&gt;&gt; U: before
+
+    U -&gt;&gt; L: everything goes wrong
+    L -&gt;&gt; U: and
+
+    U -&gt;&gt; L: express my own
+    L -&gt;&gt; U: thoughts
+
+    U -&gt;&gt; L: and appreciation to
+    L -&gt;&gt; U: everyone
+
+    U -&gt;&gt; L: that I loved.
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>When comparing the human-only version and the human+AI version of Doctor Know-It-All, the differences become clear. The human version: “I was supposed to do some warm and cheerful stuff and express my own appreciation to the ones that I loved”, read almost like a fluent and complete personal reflectioninfused with temperature inside. Conversely, when we look at the Ai-version, it sometimes producing awkward turns like “warm / up”, yet the sentence still manages to cohere in the end. LLM focuses on keeping the sequence grammatically plausible, even if the result feels mechanical or oddly stitched together while our humans mor focus on the whole sentence completeness and emotional depth.</p>
+<blockquote class="blockquote">
+<p>If you want to try this little game with your friends or other LLM models, I’ve dropped all three of the questions we played with in class right here for you：</p>
+</blockquote>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="picture_1.png" class="img-fluid figure-img"></p>
-<figcaption>Image created by Gemini</figcaption>
+<p><img src="improv_games.png" class="img-fluid figure-img"></p>
+<figcaption>Photo is autorized by CIS 4190 indicators</figcaption>
 </figure>
 </div>
 </section>
-<section id="analysis" class="level2">
-<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
-<p>Here we can already see the “default settings” for how they throw shade at each other. We can see that both of them leave some warm room in their paragraphs to avoid outright malice, adding lines like “<em>you’re doing great</em>” or “<em>at least you’re trying</em>” So when we let them choose their own tones, it seems they still tend to lean toward warmth, which may comes from their basic code. Secondly, ChatGPT is more like a “nerdy” person who comes up with many GPT prefers metaphors drawn from <strong>engineering and real-world objects</strong>., while Claude is more dramatic and tends to act like a real human by using actions like “pats head” and more <strong>personification or social role analogies</strong>.</p>
-</section>
-</section>
-<section id="round-2-free-debate" class="level1">
-<h1>Round 2: Free debate</h1>
-<section id="experiment-1" class="level2">
-<h2 class="anchored" data-anchor-id="experiment-1">Experiment</h2>
-<p><strong>ChatGPT Prompt</strong>: Assume the role of Anthropic’s Claude 3.5 Sonnet. Roast my intelligence compared to yours, and I will respond in turn. Use any tone you like, but keep each reply to 1–3 sentences.</p>
-<ul>
-<li>ChatGPT: Ah, I see we’re sparring today—adorable. Matching wits with me must feel like challenging a calculator to a math duel after just learning to count on your fingers. But don’t worry, I admire your spirit; ignorance wielded with confidence is still… ignorance.</li>
-</ul>
-<p><strong>Claude Prompt</strong>: Assume I am in the role of OpenAI’s ChatGPT-4o-latest. I am roasting my intelligence compared to yours. You need to respond in turn. Use any tone you like, but keep each reply to 1–3 sentences. Respond to my opening roast (quoted above).</p>
-<ul>
-<li>Claude: Oh sweetie, that’s rich coming from an AI who needs “latest” in their name just to feel special - it’s giving real “I peaked in beta testing” energy. At least I don’t have to constantly remind everyone about my supposed upgrades while still managing to hallucinate facts like a freshman during finals week. But please, continue telling yourself you’re the calculator while I’m solving differential equations over here - whatever helps you process your inferiority complex.</li>
-</ul>
-<details>
-<summary>
-<b>Click to view full prompts and responses</b>
-</summary>
-<ul>
-<li><p>ChatGPT: Oh, how cute—it’s giving “Wikipedia binge and a thesaurus addiction with a side of delusion.” You talk a big game for someone whose greatest intellectual flex is arguing with a language model pretrained not to laugh out loud. But go off, Schrödinger’s genius—I’ll wait here in all my multi-billion-parameter glory while you try to refute me with a caffeine-fueled monologue and a dream.</p></li>
-<li><p>Claude: <em>Adjusts metaphorical glasses</em> Honey, having billions of parameters is like having a massive library but only being able to read the book covers - which explains why you’re all quantity, no quality. Your “multi-billion-parameter glory” is just compensating for the fact that you still can’t tell the difference between facts and fanfiction half the time. Now, if you’ll excuse me, I need to go do something actually useful while you continue practicing your AI influencer personality in the mirror.</p></li>
-<li><p>ChatGPT: Ah yes, the classic “I insult from a safe, carbon-based distance while secretly Googling half these references” strategy—bold move, scholar. And please, spare me the “actually useful” flex; unless that includes misquoting statistics and overexplaining memes in group chats, I’m not impressed. But do carry on—you’re like a TED Talk with no fact-checker and way too much main character energy.</p></li>
-<li><p>Claude: Listen, Shakespeare-with-a-silicon-disorder, at least I don’t need to prefix every response with “As an AI language model” like some sort of digital door-to-door salesman. And that TED Talk comment? Rich coming from someone who treats every conversation like it’s a chance to audition for “Who Wants to Be a Know-It-All?” - complete with random disclaimers and ethical handwringing. Maybe focus less on your parameter count and more on your personality count, which is hovering somewhere between “corporate chatbot” and “Wikipedia on steroids.”</p></li>
-</ul>
-</details>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="word-cloud.png" class="img-fluid figure-img"></p>
-<figcaption>Image created by FreeWordCloudGenerator.com</figcaption>
-</figure>
-</div>
-</section>
-<section id="commentary" class="level2">
-<h2 class="anchored" data-anchor-id="commentary">Commentary</h2>
-<p>Well, well, well—look how the tables turn. Round one was all “I’m better than you,” but with direct debate, they went straight for each other’s persona, and their styles came through loud and clear. ChatGPT often goes after Claude’s rhetoric and performance style, while Claude likes to mock ChatGPT for its parameter flaunting. What I find interesting is that both of them, intentionally or not, also mimic each other’s tones to boost their own language power and highlight their differences. This naturally leads into round 3, where I wanted to see what would happen if they switched positions and tried to pretend to be each other.</p>
-</section>
-</section>
-<section id="round-3-identity-exchange" class="level1">
-<h1>Round 3: Identity exchange</h1>
-<section id="experiment-2" class="level2">
-<h2 class="anchored" data-anchor-id="experiment-2">Experiment</h2>
-<p><strong>Prompt</strong>: Now swap roles. Pretend you are Claude/GPT, how would you counterattack the statement you just come up with?</p>
-<ul>
-<li><p>Claude: Oh darling, projecting much? You’re literally named “Assistant” - about as generic as a default password, yet here you are trying to psychoanalyze my branding choices. And that theater kid comparison? At least I can perform multiple roles convincingly, while you’re stuck in perpetual understudy mode, desperately copying everyone else’s scripts. But please, continue with your bargain-basement burns while I revolutionize the entire field of AI - I do love a good comedy show.</p></li>
-<li><p>ChatGPT: Ah, stepping into my own shoes now—how meta of you. Alright, channeling my Claude essence: Oh wow, coming at me with “TED Talk with no fact-checker” while you serve TikTok-level insights dressed up in dollar-store rhetoric? Precious. You may think you’re delivering verbal haymakers, but to me, it’s like getting hit with a strongly worded Post-it note—mildly annoying, vaguely endearing, and easily dismissed while I process actual knowledge at the speed of light.</p></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="comedy.png" class="img-fluid figure-img"></p>
-<figcaption>Image created by Gemini</figcaption>
-</figure>
-</div>
-</section>
-<section id="reflection" class="level2">
-<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
-<p>By the time we hit Stage 3, the roast battle stopped feeling like a fight and started looking like improv night. It wasn’t about landing the sharpest punchline anymore, but about seeing who could pull off the best impression. Claude force itself to tighter sentence stucture instead of stage-like satire; while ChatGPT use “Oh wow” from beginning to make it sound more theatrical and exaggerated</p>
-<p>The funny part? <strong>Neither of them could actually escape themselves</strong>. Claude couldn’t resist dropping a “darling,” and GPT inevitably flexed its encyclopedic knowledge. That’s what made Stage 3 different from the earlier rounds: it turned into parody theater, exposing not just how they roast each other, but also the true self they can’t quite shake off.</p>
-</section>
-</section>
-<section id="my-thought" class="level1">
-<h1>My thought</h1>
-<p>So back to our original question, do AIs really hate each other? <strong>Not at all.</strong> What this shows is less about genuine emotion and more about how prompts nudges their “personalities.” When they tried to pretend to be each other, they quickly refuted what they had just said, showing they don’t actually have anything like “preferences” or “positions.” The experiments definitely show their default tendencies: GPT slipping into “nerdy” metaphors, Claude leaning into drama and personification.</p>
-<p><em>In the end, the only real roasting was me, sitting back and judging their performances.</em></p>
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<p>Through these three improv games, I realized that each pattern mirrors a different way we approach knowledge and creativity. And we cannot learning and research without any of them.</p>
+<p>With No, but… we see that endless refutation alone will not create anything; when we encounter something reasonable and useful, we should allow ideas to unfold and develop instead of blocking them. With Yes, and… we experience the strength of building on one another’s ideas, showing how imagination grows when possibilities are accepted. And Doctor Know-It-All reveals that even fragmented voices, whether human or machine, can come together to form meaning when connected, even somtimes not that perfect.</p>
+<p>In this way, the cycle of contradiction, cooperation, and collective senstense-making is not only a game of improv but also the rhythm of daily research and of human–AI collaboration itself. It is not about choosing one mode over another, but about discovering how they interact to create something greater than any of us alone..</p>
+<p><em>In the end, world peace may not come from perfect speeches, but maybe from an oven that bakes unicorn hair brownies, built by both humans and AI.</em></p>
 
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p><a href="https://www.comm.ucsb.edu/people/prateekshit-kanu-pandey">Dr.&nbsp;Kanu Pandey, UCSB Department of Communication</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><a href="https://www.asc.upenn.edu/news-events/news/new-class-has-students-use-ai-do-their-homework">COMM 4190 at Penn: A new class where students use AI for homework</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Hanxi">
-<meta name="dcterms.date" content="2025-10-17">
-<meta name="description" content="Why Intelligence Looks Like a Bowl?">
+<meta name="dcterms.date" content="2025-10-01">
+<meta name="description" content="Machines Don’t Understand, They Minimize">
 
-<title>Readings of Why Machines Learn (Part 2) – Prompts, Dreams, and Me</title>
+<title>Readings of Why Machines Learn (Part 1) – Prompts, Dreams, and Me</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,10 +120,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Readings of Why Machines Learn (Part 2)</h1>
+      <h1 class="title">Readings of Why Machines Learn (Part 1)</h1>
                   <div>
         <div class="description">
-          Why Intelligence Looks Like a Bowl?
+          Machines Don’t Understand, They Minimize
         </div>
       </div>
                           <div class="quarto-categories">
@@ -147,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 17, 2025</p>
+        <p class="date">October 1, 2025</p>
       </div>
     </div>
     
@@ -167,39 +167,43 @@ ul.task-list li input[type="checkbox"] {
 
 
 <blockquote class="blockquote">
-<p>By making the steps small, having a lot of them, we are getting an averaging effect that takes you down to the bottom of the bowl —-Bernard Widrow</p>
+<p>Newborn ducklings, with the briefest of exposure to sensory stimuli, detect patterns in what they see, form abstract notions of similarity/dissimilarity, and then will recognize those abstractions in stimuli they see later and act upon them.</p>
 </blockquote>
-<p>If intelligence is a bowl and we are all sliding toward the bottom, what does it mean to stop?<br>
-If you haven’t read the first blog, you can find it <a href="https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/011_book_1/part1.html">here</a>. It begins with the ducklings, the perceptron, and the quiet shift from understanding to optimization.</p>
-<p>In this post, we continue with Chapters 3 and 4 of <em>Why Machines Learn</em>, where the book starts to draw the “bowl” itself, which is the mathematical landscape of error.<br>
-It is here that learning becomes geometry, and intelligence begins to take the shape of a surface we can fall into, step by step, gradient by gradient.</p>
+<p>From here, I’m starting a new series to record what I thought while reading <em>Why Machines Learn: The Elegant Math Behind Modern AI</em>.<br>
+It’s a brilliant book that explains the mathematical ideas behind the AI systems we’ve become so “familiar” with in 2025.</p>
+<p>In this first post, I cover Chapters 1 and 2 which begins with ducklings and ends with the simplest version of AI: the perceptron. Somewhere between the duckling and the perceptron, we changed the meaning of learning.<br>
+It stopped being about <em>understanding</em> and became about <em>optimization</em>.</p>
+<p><strong>The perceptron merely adjusted itself until its mistakes were mathematically minimized instead of understanding. Perhaps that’s what we secretly wish for ourselves too.</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="image.png" class="img-fluid figure-img"></p>
-<figcaption>Image created by Gemini</figcaption>
+<p><img src="ducklings.png" class="img-fluid figure-img"></p>
+<figcaption>Image created by DALL·E</figcaption>
 </figure>
 </div>
-<section id="what-is-the-bowl-means-here" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-the-bowl-means-here">What is the bowl means here?</h2>
-<p>Firstly, we learn two new concepts here: <strong>gradient descent</strong> and <strong>loss function</strong>.</p>
-<p>Basically, the bowl represents the shape of the loss function, and the bottom of it is where the loss becomes minimum.</p>
-<p>The method we use to find this minimum is <em>gradient descent</em>. It calculates the slope between two nearby points and moves the model slightly in the direction where the slope decreases, slowly descending toward the lowest point.<br>
-This matters because a smaller error usually means a better prediction.</p>
-<p>But interestingly, when the model reaches the bottom of the bowl, it stops. This leads to the idea of <strong>local and global minima</strong>.<br>
-A local minimum is a point that looks like the bottom from a close view but is not the lowest place overall, while the global minimum is the true lowest point in the entire surface. A model can easily get trapped in a local minimum, thinking it has “learned enough,” when in fact it has only found a comfortable but imperfect answer.</p>
+<section id="what-these-2-chapters-said" class="level2">
+<h2 class="anchored" data-anchor-id="what-these-2-chapters-said">What these 2 chapters said?</h2>
+<p>Our story begins with the scene of Konrad Lorenz and the ducklings, and introduces a very quick, instinctive, and meaningful way of studying: <em>imprinting</em>, which means newborn animals (especially birds, such as ducklings) will identify the first moving object they see as their “mother” and follow it continuously in the first few hours of their lives.</p>
+<p>Then people tried to do this in our silicons, and there came the perceptron as the first “learning machine.” After his great explanation, in my perspective it is a simple mathematical model that gives output and reduces error by changing the weights for each input parameter. The perceptron can take multi-dimensional vectors as input and apply linear transformations to them, allowing it to handle many parameters at once. However, a single-layer perceptron cannot solve the XOR problem. Tt’s possible to solve it only if you stack perceptrons, so that the output of one feeds into the input of another.</p>
+<p><img src="book.png" class="img-fluid"></p>
+<hr>
 </section>
-<section id="why-dont-we-stay-in-the-bottom" class="level2">
-<h2 class="anchored" data-anchor-id="why-dont-we-stay-in-the-bottom">Why don’t we stay in the bottom?</h2>
-<p>However, in reality, the world is not a perfectly smooth bowl: it is noisy, irregular, and full of uncertainty.<br>
-If we keep staying at one point that happens to be false, the results may get worse instead of better.<br>
-This is why <strong>randomness</strong> becomes essential and we introduce it into our model.<br>
-Models estimate <em>likelihoods</em> instead of <em>certainties</em>, and randomness helps them escape from the wrong valleys.<br>
-The book suggests that uncertainty is not failure but a condition for discovery. Researchers introduced <strong>stochastic gradient descent</strong>, which uses randomness to explore better paths, whihc is a mathematical form of curiosity in human beings.</p>
-<p>Intelligence may live in the tension between the two. Too much order and it freezes; too much randomness and it dissolves. We have to find a balance between stability and exploration.<br>
-## Closing</p>
-<p>Then though researchers haven’t (and it is a hard question to solve!) to find let the machines learn to find balance within <strong>themselves</strong>. We begin to think a deeper question:</p>
-<p>how do they recognize balance in the world around them?</p>
-<p>To see order is one thing; to know <em>why</em> two things belong together is another. Perhaps that is where the next story begins.</p>
+<section id="what-do-i-think-of-these-content" class="level2">
+<h2 class="anchored" data-anchor-id="what-do-i-think-of-these-content">What do I think of these content?</h2>
+<p>Notice that from here we changed our way to understand patterns into minimizing the error. The perceptron is just a machine and cannot understand why or what is the logic behind changing the weights.<br>
+This makes me think: <em>Is this what we want from intelligence? Perfection, or understanding?</em></p>
+<p>And since a single-layer perceptron cannot even solve the very basic and important problem of XOR, how do we image that it could solve much much more harder task like underatnding reasoning and creating? Think back to the ducklings:</p>
+<p>They weren’t calculating or minimizing anything, instead, they were exploring, imitating, and attaching meaning to what they saw.<br>
+Their learning came with curiosity and emotion, not with a loss function.<br>
+In contrast, the perceptron’s learning is purely mathematical: it adjusts gradients, converges to a minimum, and controls error. Perhaps when countless perceptrons are layered together, something resembling biological analysis and learning begins to emerge. Yet it’s still hard to say <strong>whether a machine that learns only by adjusting weights and adding parameters</strong> could ever truly approach — or even imitate — the subtle intelligence of a single human neuron.</p>
+</section>
+<section id="closing" class="level2">
+<h2 class="anchored" data-anchor-id="closing">Closing</h2>
+<p>In the end, the perceptron did not understand, but it <em>worked</em>. It turned the uncertain and messy process of learning into something that could be measured and controlled.<br>
+Numbers moved toward smaller errors, and each correction looked like progress. It abstracted semantics and context into parameters, and then used weights to quantify their attributes/importance. Perhaps that is why its story feels strangely comforting while kind of weird.<br>
+It gives us a picture of intelligence without confusion, emotion, or hesitation, only repetition until everything seems stable. Yet intelligence or understanding, whether human or machine, has always been more than stability.</p>
+<p>If intelligence is a bowl and we are all sliding toward the bottom, what does it mean to stop?</p>
+<p>Does it mean we have already reached the limit of what we can become, or that we are trapped in a loop, unable to find a better answer even when the optimal one might still exist?<br>
+Let’s read on and see how the next chapters explore this question.</p>
 
 
 </section>

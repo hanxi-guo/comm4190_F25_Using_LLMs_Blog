@@ -2,110 +2,114 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/about.html</loc>
-    <lastmod>2025-12-14T21:02:31.502Z</lastmod>
+    <lastmod>2025-12-14T21:59:20.482Z</lastmod>
   </url>
   <url>
     <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/005_translate/translate.html</loc>
-    <lastmod>2025-12-14T21:02:31.520Z</lastmod>
+    <lastmod>2025-12-14T21:59:20.500Z</lastmod>
   </url>
   <url>
     <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/016_travel_blog_2/travel_2.html</loc>
-    <lastmod>2025-12-14T21:02:31.739Z</lastmod>
+    <lastmod>2025-12-14T21:59:20.726Z</lastmod>
   </url>
   <url>
     <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/009_ages/age.html</loc>
-    <lastmod>2025-12-14T21:02:31.529Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/017_travel_blog_3/travel_3.html</loc>
-    <lastmod>2025-12-14T21:02:31.748Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/014_noble/noble.html</loc>
-    <lastmod>2025-12-14T21:02:31.592Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/002_mbti/mbti_part1.html</loc>
-    <lastmod>2025-12-14T21:02:31.511Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/013_ophelia/ophelia.html</loc>
-    <lastmod>2025-12-14T21:02:31.591Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/027_book_5/book_5.html</loc>
-    <lastmod>2025-12-14T21:02:31.775Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/007_emotion/meter.html</loc>
-    <lastmod>2025-12-14T21:02:31.528Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/022_atlas/atlas.html</loc>
-    <lastmod>2025-12-14T21:02:31.758Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/024_book_4/book_4.html</loc>
-    <lastmod>2025-12-14T21:02:31.770Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/021_book_3/book_3.html</loc>
-    <lastmod>2025-12-14T21:02:31.751Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/index.html</loc>
-    <lastmod>2025-12-14T21:02:31.502Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/011_book_1/part1.html</loc>
-    <lastmod>2025-12-14T21:02:31.558Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/003_mbti_part2/part2.html</loc>
-    <lastmod>2025-12-14T21:02:31.514Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/010_mbti_part4/part_4.html</loc>
-    <lastmod>2025-12-14T21:02:31.541Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/019_IUCN/IUCN.html</loc>
-    <lastmod>2025-12-14T21:02:31.750Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/012_gpt_buying/buying.html</loc>
-    <lastmod>2025-12-14T21:02:31.562Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/018_book_2/book_2.html</loc>
-    <lastmod>2025-12-14T21:02:31.748Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/006_culture/what_if.html</loc>
-    <lastmod>2025-12-14T21:02:31.524Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/004_mbti_prompt/mbti_prompt.html</loc>
-    <lastmod>2025-12-14T21:02:31.516Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/023_letters/letter.html</loc>
-    <lastmod>2025-12-14T21:02:31.770Z</lastmod>
+    <lastmod>2025-12-14T21:59:20.509Z</lastmod>
   </url>
   <url>
     <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/015_travel_blog/princeton.html</loc>
-    <lastmod>2025-12-14T21:02:31.709Z</lastmod>
+    <lastmod>2025-12-14T21:59:20.696Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/023_letters/letter.html</loc>
+    <lastmod>2025-12-14T21:59:20.776Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/004_mbti_prompt/mbti_prompt.html</loc>
+    <lastmod>2025-12-14T21:59:20.496Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/006_culture/what_if.html</loc>
+    <lastmod>2025-12-14T21:59:20.504Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/018_book_2/book_2.html</loc>
+    <lastmod>2025-12-14T21:59:20.735Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/012_gpt_buying/buying.html</loc>
+    <lastmod>2025-12-14T21:59:20.541Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/019_IUCN/IUCN.html</loc>
+    <lastmod>2025-12-14T21:59:20.737Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/010_mbti_part4/part_4.html</loc>
+    <lastmod>2025-12-14T21:59:20.521Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/003_mbti_part2/part2.html</loc>
+    <lastmod>2025-12-14T21:59:20.493Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/011_book_1/part1.html</loc>
+    <lastmod>2025-12-14T21:59:20.537Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/index.html</loc>
+    <lastmod>2025-12-14T21:59:20.482Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/021_book_3/book_3.html</loc>
+    <lastmod>2025-12-14T21:59:20.757Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/024_book_4/book_4.html</loc>
+    <lastmod>2025-12-14T21:59:20.776Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/022_atlas/atlas.html</loc>
+    <lastmod>2025-12-14T21:59:20.763Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/007_emotion/meter.html</loc>
+    <lastmod>2025-12-14T21:59:20.507Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/027_book_5/book_5.html</loc>
+    <lastmod>2025-12-14T21:59:20.780Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/013_ophelia/ophelia.html</loc>
+    <lastmod>2025-12-14T21:59:20.554Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/002_mbti/mbti_part1.html</loc>
+    <lastmod>2025-12-14T21:59:20.490Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/014_noble/noble.html</loc>
+    <lastmod>2025-12-14T21:59:20.582Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/017_travel_blog_3/travel_3.html</loc>
+    <lastmod>2025-12-14T21:59:20.735Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/020_coke/class.html</loc>
+    <lastmod>2025-12-14T21:59:20.738Z</lastmod>
   </url>
   <url>
     <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/001_post_title/Do_AIs_Hate_Each_Other.html</loc>
-    <lastmod>2025-12-14T21:02:31.504Z</lastmod>
+    <lastmod>2025-12-14T21:59:20.483Z</lastmod>
   </url>
   <url>
     <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/029_book_6/book_6.html</loc>
-    <lastmod>2025-12-14T21:02:31.778Z</lastmod>
+    <lastmod>2025-12-14T21:59:20.783Z</lastmod>
   </url>
   <url>
     <loc>https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/008_class_activity/index.html</loc>
-    <lastmod>2025-12-14T21:02:31.529Z</lastmod>
+    <lastmod>2025-12-14T21:59:20.509Z</lastmod>
   </url>
 </urlset>

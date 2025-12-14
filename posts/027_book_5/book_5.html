@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Hanxi">
-<meta name="dcterms.date" content="2025-10-25">
-<meta name="description" content="Why Intelligence Looks Like a Bowl?">
+<meta name="dcterms.date" content="2025-11-21">
+<meta name="description" content="Who Killed AI, and How Calculus Brought It Back">
 
-<title>Readings of Why Machines Learn (Part 3) – Prompts, Dreams, and Me</title>
+<title>Readings of Why Machines Learn (Part 5) – Prompts, Dreams, and Me</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,10 +118,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Readings of Why Machines Learn (Part 3)</h1>
+      <h1 class="title">Readings of Why Machines Learn (Part 5)</h1>
                   <div>
         <div class="description">
-          Why Intelligence Looks Like a Bowl?
+          Who Killed AI, and How Calculus Brought It Back
         </div>
       </div>
                           <div class="quarto-categories">
@@ -145,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 25, 2025</p>
+        <p class="date">November 21, 2025</p>
       </div>
     </div>
     
@@ -164,40 +164,38 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<blockquote class="blockquote">
+<p>It was just kind of by analogy: ‘Since we proved the simple nets can’t do it, forget it.’</p>
+</blockquote>
+<p>In the previous chapters, we looked at how we can manipulate space (kernels) and borrow laws from physics (energy landscapes) to make machines learn. Everything seemed elegant. But history, apparently, is not a straight line.</p>
+<p>Chapters 9 and 10 recount the most dramatic oscillation in AI history: the “Winter” caused by a mathematical proof, and the renaissance driven by a simple application of calculus. But are the “winter” really a terrible thing? How the nerual network reborn? Let’s see together.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="image.png" class="img-fluid figure-img"></p>
+<p><img src="cover.png" class="img-fluid figure-img"></p>
 <figcaption>Image created by Gemini</figcaption>
 </figure>
 </div>
-<blockquote class="blockquote">
-<p>By making the steps small, having a lot of them, we are getting an averaging effect that takes you down to the bottom of the bowl —-Bernard Widrow</p>
-</blockquote>
-<p>If intelligence is a bowl and we are all sliding toward the bottom, what does it mean to stop?<br>
-If you haven’t read the first blog, you can find it <a href="https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/018_book_2/book_2.html">here</a>. It begins with the ducklings, the perceptron, and the quiet shift from understanding to optimization.</p>
-<p>In this post, we continue with Chapters 3 and 4 of <em>Why Machines Learn</em>, where the book starts to draw the “bowl” itself, which is the mathematical landscape of error.<br>
-It is here that learning becomes geometry, and intelligence begins to take the shape of a surface we can fall into, step by step, gradient by gradient.</p>
-<section id="what-is-the-bowl-means-here" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-the-bowl-means-here">What is the bowl means here?</h2>
-<p>Firstly, we learn two new concepts here: <strong>gradient descent</strong> and <strong>loss function</strong>.</p>
-<p>Basically, the bowl represents the shape of the loss function, and the bottom of it is where the loss becomes minimum.</p>
-<p>The method we use to find this minimum is <em>gradient descent</em>. It calculates the slope between two nearby points and moves the model slightly in the direction where the slope decreases, slowly descending toward the lowest point.<br>
-This matters because a smaller error usually means a better prediction.</p>
-<p>But interestingly, when the model reaches the bottom of the bowl, it stops. This leads to the idea of <strong>local and global minima</strong>.<br>
-A local minimum is a point that looks like the bottom from a close view but is not the lowest place overall, while the global minimum is the true lowest point in the entire surface. A model can easily get trapped in a local minimum, thinking it has “learned enough,” when in fact it has only found a comfortable but imperfect answer.</p>
+<section id="being-right-but-at-what-cost" class="level2">
+<h2 class="anchored" data-anchor-id="being-right-but-at-what-cost">Being right, but at what cost?</h2>
+<p>Chapter 9 introduces Marvin Minsky and Seymour Papert. In 1969, they published Perceptrons. Their main point was mathematically undeniable: a simple, single-layer neural network cannot solve the XOR problem.</p>
+<p>In plain English: a simple network can’t understand that “A or B, but not both” is different from “A and B.” It’s a basic logical contradiction, and the early AI couldn’t handle it.</p>
+<p>Minsky didn’t just point this out; he proved it with such rigorous authority that funding for neural networks basically evaporated. We call this the “AI Winter,” which makes it sound like a Game of Thrones season, but in reality, it was just a lot of researchers losing their beliefs on the topics that neural network could actually make sense in the future, same as <strong>Perpetual motion</strong>.</p>
+<p>But just as author said in the book, it is not the fault of Minsky, he just pointed out that the simple machines cannot solve the problem at that point. He proved the limitation of simple networks, but people took it as a limitation of all networks.</p>
 </section>
-<section id="why-dont-we-stay-in-the-bottom" class="level2">
-<h2 class="anchored" data-anchor-id="why-dont-we-stay-in-the-bottom">Why don’t we stay in the bottom?</h2>
-<p>However, in reality, the world is not a perfectly smooth bowl: it is noisy, irregular, and full of uncertainty.<br>
-If we keep staying at one point that happens to be false, the results may get worse instead of better.<br>
-This is why <strong>randomness</strong> becomes essential and we introduce it into our model.<br>
-Models estimate <em>likelihoods</em> instead of <em>certainties</em>, and randomness helps them escape from the wrong valleys.<br>
-The book suggests that uncertainty is not failure but a condition for discovery. Researchers introduced <strong>stochastic gradient descent</strong>, which uses randomness to explore better paths, whihc is a mathematical form of curiosity in human beings.</p>
-<p>Intelligence may live in the tension between the two. Too much order and it freezes; too much randomness and it dissolves. We have to find a balance between stability and exploration.<br>
-## Closing</p>
-<p>Then though researchers haven’t (and it is a hard question to solve!) to find let the machines learn to find balance within <strong>themselves</strong>. We begin to think a deeper question:</p>
-<p>how do they recognize balance in the world around them?</p>
-<p>To see order is one thing; to know <em>why</em> two things belong together is another. Perhaps that is where the next story begins.</p>
+<section id="the-art-of-assigning-blame" class="level2">
+<h2 class="anchored" data-anchor-id="the-art-of-assigning-blame">The art of assigning blame</h2>
+<p>So, how did we thaw the winter? Chapter 10 introduces the solution: adding hidden layers and using <em>Backpropagation</em>.</p>
+<p>The problem with hidden layers used to be: if the answer is wrong, who is responsible? Which neuron in the messy middle caused the error? Backpropagation answers this using the Chain Rule from calculus. It’s essentially a mathematical way of “passing the buck.” (Honestly when I learn chain rules in my calculus class I never seen such huge power of it :D)</p>
+<p>This, to me, is the most profound shift in the book so far. Backpropagation allows the system to look at the final error and mathematically distribute the “blame” backward through the layers. It asks: “How much did your weight contribute to this mistake?” and adjusts it accordingly. The system looks at the final error and says, “Okay, we were off by 5. Layer 3 contributed 20% to this mess, so adjust them a lot. Layer 2 only contributed 1%, so leave them alone.”</p>
+<p>It turns out that “learning” is just the ability to efficiently distribute blame.</p>
+<p>Once we figured out how to send the error signal backward through the layers, the “XOR problem” became trivial. The machine didn’t need to understand logic; it just needed to be scolded precisely enough, millions of times, until it stopped making mistakes.</p>
+</section>
+<section id="closing" class="level2">
+<h2 class="anchored" data-anchor-id="closing">Closing</h2>
+<p>These two chapters taught me that mathematical rigour is a double-edged sword. Minsky’s rigour froze the field because it demanded perfection too early. The solution wasn’t to find a flawless logic, but to accept a messy system that corrects itself, little by little.</p>
+<p>It mirrors our own lives. We often get so obsessed with the ‘proper’ way to solve a problem—getting stuck in the messy middle—that we forget our original destination. Minsky stopped because the path wasn’t perfect. But sometimes, if the math says the door is locked, the answer isn’t to study the lock; it’s to change the route, or better yet, <strong>simply kick the door open</strong>.</p>
+<p>But there is a cost to this shift. In the era of the perceptron, we knew exactly why the machine failed. In the era of deep learning and backpropagation, the machine succeeds, but the rationale is buried in millions of tiny adjustments to millions of weights. We have traded clarity for capability.</p>
+<p>So now we have a powerful machine, but it’s a black box. What do we do? Naturally, we try to control it. In the next post (Chapters 11-12), we’ll discuss how engineers tried to force these networks to “see” the world like humans do.</p>
 
 
 </section>

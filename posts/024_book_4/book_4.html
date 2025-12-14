@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Hanxi">
-<meta name="dcterms.date" content="2025-10-25">
-<meta name="description" content="Why Intelligence Looks Like a Bowl?">
+<meta name="dcterms.date" content="2025-11-08">
+<meta name="description" content="Is Adding Dimensions the Same as Understanding More?">
 
-<title>Readings of Why Machines Learn (Part 3) – Prompts, Dreams, and Me</title>
+<title>Readings of Why Machines Learn (Part 4) – Prompts, Dreams, and Me</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,10 +118,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Readings of Why Machines Learn (Part 3)</h1>
+      <h1 class="title">Readings of Why Machines Learn (Part 4)</h1>
                   <div>
         <div class="description">
-          Why Intelligence Looks Like a Bowl?
+          Is Adding Dimensions the Same as Understanding More?
         </div>
       </div>
                           <div class="quarto-categories">
@@ -145,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 25, 2025</p>
+        <p class="date">November 8, 2025</p>
       </div>
     </div>
     
@@ -164,40 +164,43 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<blockquote class="blockquote">
+<p>A network could ‘solve a problem’ or have a function that was beyond the capability of a single molecule and a linear pathway.</p>
+</blockquote>
+<p>In the previous chapters, we discussed how information from the real world is abstracted into vectors and matrices so that machines can learn from it. Methods such as gradient descent and PCA allow us to evaluate how well a model is learning, guiding it to gradually converge toward a “better” behavior, and to reason about how similar different behaviors are.</p>
+<p>But similarity always comes with compression. In deciding what should be close and what should be far apart, some information is inevitably smoothed out or discarded. Once we recognize this loss, the question shifts: how do we compensate for what disappears in the process?</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="image.png" class="img-fluid figure-img"></p>
+<p><img src="cover.png" class="img-fluid figure-img"></p>
 <figcaption>Image created by Gemini</figcaption>
 </figure>
 </div>
-<blockquote class="blockquote">
-<p>By making the steps small, having a lot of them, we are getting an averaging effect that takes you down to the bottom of the bowl —-Bernard Widrow</p>
-</blockquote>
-<p>If intelligence is a bowl and we are all sliding toward the bottom, what does it mean to stop?<br>
-If you haven’t read the first blog, you can find it <a href="https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/018_book_2/book_2.html">here</a>. It begins with the ducklings, the perceptron, and the quiet shift from understanding to optimization.</p>
-<p>In this post, we continue with Chapters 3 and 4 of <em>Why Machines Learn</em>, where the book starts to draw the “bowl” itself, which is the mathematical landscape of error.<br>
-It is here that learning becomes geometry, and intelligence begins to take the shape of a surface we can fall into, step by step, gradient by gradient.</p>
-<section id="what-is-the-bowl-means-here" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-the-bowl-means-here">What is the bowl means here?</h2>
-<p>Firstly, we learn two new concepts here: <strong>gradient descent</strong> and <strong>loss function</strong>.</p>
-<p>Basically, the bowl represents the shape of the loss function, and the bottom of it is where the loss becomes minimum.</p>
-<p>The method we use to find this minimum is <em>gradient descent</em>. It calculates the slope between two nearby points and moves the model slightly in the direction where the slope decreases, slowly descending toward the lowest point.<br>
-This matters because a smaller error usually means a better prediction.</p>
-<p>But interestingly, when the model reaches the bottom of the bowl, it stops. This leads to the idea of <strong>local and global minima</strong>.<br>
-A local minimum is a point that looks like the bottom from a close view but is not the lowest place overall, while the global minimum is the true lowest point in the entire surface. A model can easily get trapped in a local minimum, thinking it has “learned enough,” when in fact it has only found a comfortable but imperfect answer.</p>
+<section id="what-if-we-change-the-space-instead-of-the-methods" class="level2">
+<h2 class="anchored" data-anchor-id="what-if-we-change-the-space-instead-of-the-methods">What if we change the space instead of the methods?</h2>
+<p>In Chapter 7, the author introduces the kernel trick with a sense of quiet cleverness. In reality, most problems are not linear, which means we cannot simply draw a straight line to separate the data. One way to deal with this is to change the space itself. If we map the data into a higher-dimensional space, points that were inseparable before might suddenly become separable by a single line, or more precisely, by a hyperplane. Thus we can change the nonlinear problem into a linear problem in mathematical way. However, there is a problem that explicitly computing this high-dimensional mapping is often too expensive.</p>
+<p>This is where the <em>kernel trick</em> comes in.<br>
+Instead of actually lifting the data into a higher dimension, we define a kernel function that directly computes inner products <em>as if</em> the data were already there. More specifically, it is a function that takes two “high-dimension”data points as input and returns a number that represents how similar they are. From the outside, the model still looks like a simple linear one. But behind the scenes, it is operating in a much richer space.</p>
+<p><strong>Support Vector Machines</strong> are a good example of this way of thinking. Instead of trying to understand the data directly, an SVM looks for a boundary that keeps different points as far apart as possible. With the help of a kernel, this boundary can bend into surprisingly complex shapes in a high-dimensional space, while still relying on a clean and simple rule—much like what we have already seen in linear methods.</p>
+<p>The kernel trick feels less like teaching a model to understand complexity, and more like giving it a carefully prepared space where complexity no longer appears.</p>
 </section>
-<section id="why-dont-we-stay-in-the-bottom" class="level2">
-<h2 class="anchored" data-anchor-id="why-dont-we-stay-in-the-bottom">Why don’t we stay in the bottom?</h2>
-<p>However, in reality, the world is not a perfectly smooth bowl: it is noisy, irregular, and full of uncertainty.<br>
-If we keep staying at one point that happens to be false, the results may get worse instead of better.<br>
-This is why <strong>randomness</strong> becomes essential and we introduce it into our model.<br>
-Models estimate <em>likelihoods</em> instead of <em>certainties</em>, and randomness helps them escape from the wrong valleys.<br>
-The book suggests that uncertainty is not failure but a condition for discovery. Researchers introduced <strong>stochastic gradient descent</strong>, which uses randomness to explore better paths, whihc is a mathematical form of curiosity in human beings.</p>
-<p>Intelligence may live in the tension between the two. Too much order and it freezes; too much randomness and it dissolves. We have to find a balance between stability and exploration.<br>
-## Closing</p>
-<p>Then though researchers haven’t (and it is a hard question to solve!) to find let the machines learn to find balance within <strong>themselves</strong>. We begin to think a deeper question:</p>
-<p>how do they recognize balance in the world around them?</p>
-<p>To see order is one thing; to know <em>why</em> two things belong together is another. Perhaps that is where the next story begins.</p>
+<section id="can-we-explain-learning-with-physics" class="level2">
+<h2 class="anchored" data-anchor-id="can-we-explain-learning-with-physics">Can we explain learning with physics?</h2>
+<p>Chapter 8 brings in physics as a way to think about learning. The author talks about energy landscapes, forces and stable states, and shows how networks like Hopfield nets can be understood as systems that settle into low energy configurations. It makes learning feel like a natural process, almost like a physical law: systems simply roll downhill until they reach a valley.</p>
+<p>The author mentioned an important person: Dr.John Hopfield and his ground-breaking research. Interestingly, he did not arrive at his network by starting from machine learning at all. His background was in physics and biology, where he spent years studying systems made of many interacting parts. When these parts were connected into a network. Very different initial conditions could evolve toward the same stable outcome</p>
+<p>But to Hopfield, something was missing. There was no language for describing how a large network, taken as a whole, could compute, remember, or decide.</p>
+<p>Physics offered him that language. Instead of asking what each neuron should do, he asked how the state of an entire network evolves. Neural activity could be described as a dynamical system, which always tending toward more stable configurations. From this view, computation was no longer a sequence of instructions, but a process of relaxation. The system was not being told what to do; it was simply run follow the natural physical rules.</p>
+<p>The Hopfield network emerged from this shift in perspective. Give the system a partial or noisy input, and it would evolve on its own until it reached one of these states.</p>
+<p>Personally, I find this both reassuring and a little dangerous.<br>
+It reassures me because it gives me a concrete picture to hold on to.<br>
+At the same time, it makes it very tempting to treat our models as if they were just obeying nature, rather than <strong>executing human designed rules on human chosen data</strong>, which is actually what it done.</p>
+</section>
+<section id="closing" class="level2">
+<h2 class="anchored" data-anchor-id="closing">Closing</h2>
+<p>Together, Chapters 7 and 8 show how humans design intelligent systems using powerful metaphors. We bend space so that simple rules can appear powerful; we borrow ideas from physics so that abstract optimization feels natural and intuitive. These approaches have pushed the field forward in remarkable ways.</p>
+<p>But they also quietly shape how we think about what learning is.</p>
+<p>Once learning is framed in the language of geometry and physics, it begins to resemble a process governed by natural law rather than by human choice. The system no longer looks designed; it looks inevitable. In this framing, models are not making decisions—we are led to believe they are simply obeying the structure of the world.</p>
+<p>When that happens, bias starts to look like structure, and design choices start to look like necessity.</p>
+<p>So when a machine looks at an image and decides what counts as an edge, a face, or an object, we should ask: how much of that “seeing” comes from the data itself, and how much comes from the stories we told ourselves about how learning ought to work?</p>
 
 
 </section>

@@ -7,8 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Hanxi">
-<meta name="dcterms.date" content="2025-10-25">
-<meta name="description" content="Why Intelligence Looks Like a Bowl?">
+<meta name="description" content="Who define the belonging in machines?">
 
 <title>Readings of Why Machines Learn (Part 3) – Prompts, Dreams, and Me</title>
 <style>
@@ -121,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
       <h1 class="title">Readings of Why Machines Learn (Part 3)</h1>
                   <div>
         <div class="description">
-          Why Intelligence Looks Like a Bowl?
+          Who define the belonging in machines?
         </div>
       </div>
                           <div class="quarto-categories">
@@ -145,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 25, 2025</p>
+        <p class="date">Invalid Date</p>
       </div>
     </div>
     
@@ -164,40 +163,49 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<blockquote class="blockquote">
+<p>That’s the caveman intuition: If they look alike, they probably are alike.</p>
+</blockquote>
+<section id="who-decides-what-similar-means" class="level2">
+<h2 class="anchored" data-anchor-id="who-decides-what-similar-means">Who decides what “similar” means?</h2>
+<p>In the previous chapters, the author focused on how machines learn by moving through a loss landscape. We talked about bowls, gradients, and how a model slowly slides toward a point where the error is minimized.<br>
+That story was mainly about <em>how well</em> a machine learns.</p>
+<p>Chapter 5 shifts the question in a subtle but important way. Instead of asking whether a model has reached the right answer, the book begins to ask how a machine decides which things belong together in the first place. Learning is about defining who counts as “close” to whom by specific learning methods like nearest neighbors and Voronoi diagrams.</p>
+<p>The main use here, as author said, is that when we encounter a new and never-seen vector as a point in a high-dimensional space, we look at its neighbors base on the assumption that close points in space are more similar to each other. For example, if I casually write down a digit and project it into a 63-dimensional space, and the nearest labeled points are mostly “2”, then this new point is likely to be a “2” as well.<br>
+If its closest neighbors are “8”, then it is probably an “8”.</p>
+<p>By these ways, we are no longer limited to simple visual similarity in low dimensions but can map any infomation into a vector in higher space. But this also raises a deeper question for me:</p>
+<p><em>How, and under what assumptions, can we turn more complex things into points in a high-dimensional space in the first place?</em></p>
+</section>
+<section id="why-matrices-have-the-right-to-rearrange-reality" class="level2">
+<h2 class="anchored" data-anchor-id="why-matrices-have-the-right-to-rearrange-reality">Why matrices have the right to rearrange reality?</h2>
+<p>Chapter 6 answers my question in a very specific way. Instead of introducing matrices as dry tables of numbers, the author presents them as tools that can rotate, stretch, compress, and project an entire dataset. In this chapter, everything in the world becomes a long vector, with each dimension encoding a measurable feature. Since vectors can be rotated, compressed, or projected onto new axes by matrices (which can be thought of here as a stacked and extended version of vectors), we can, to some extent, rearrange reality through them.</p>
+<p>In this chapter, the author introduces a method called principal component analysis (PCA), based on eigenvectors. PCA focuses on the dimensions along which the variation is largest and uses them as the main axes of the space. Visually, it is like turning a messy cloud of points until its structure suddenly makes sense, or begins to follow a specific direction, while the remaining variation is pushed into the background. In this way, once the data is transformed, nearest neighbors are no longer determined by raw features, but by how those features survive the transformation. In this reshaped space, who ends up close to you depends entirely on what your vector looks like after the space itself has been reconfigured.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="image.png" class="img-fluid figure-img"></p>
+<p><a href="https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues"><img src="lNHqt.gif" class="img-fluid figure-img"></a></p>
+<figcaption>Image from a great explanation of PCA in Stack Exchange</figcaption>
+</figure>
+</div>
+</section>
+<section id="is-similarity-a-fact-or-a-choice" class="level2">
+<h2 class="anchored" data-anchor-id="is-similarity-a-fact-or-a-choice">Is similarity a fact, or a choice?</h2>
+<p>But this apparent accuracy hides a deeper assumption. Similarity only works because someone has already decided which features matter, how distance should be measured, and how the space itself should be transformed. In most cases, this process is little more than assigning numbers to enums, trying different combinations, and seeing which one works best.</p>
+<p>Distance functions, feature selection, and matrix transformations are not neutral tools. They quietly encode judgments about what counts as important and what can be ignored. Yet they cannot explain why a particular transformation makes sense, or <em>why</em> a certain feature deserves a higher weight when calculating user “similarity.”</p>
+<p>They simply play around with numbers until a relatively better result appears. And as we already concluded before, this does not mean they understand anything at all.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="cover.png" class="img-fluid figure-img"></p>
 <figcaption>Image created by Gemini</figcaption>
 </figure>
 </div>
-<blockquote class="blockquote">
-<p>By making the steps small, having a lot of them, we are getting an averaging effect that takes you down to the bottom of the bowl —-Bernard Widrow</p>
-</blockquote>
-<p>If intelligence is a bowl and we are all sliding toward the bottom, what does it mean to stop?<br>
-If you haven’t read the first blog, you can find it <a href="https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/018_book_2/book_2.html">here</a>. It begins with the ducklings, the perceptron, and the quiet shift from understanding to optimization.</p>
-<p>In this post, we continue with Chapters 3 and 4 of <em>Why Machines Learn</em>, where the book starts to draw the “bowl” itself, which is the mathematical landscape of error.<br>
-It is here that learning becomes geometry, and intelligence begins to take the shape of a surface we can fall into, step by step, gradient by gradient.</p>
-<section id="what-is-the-bowl-means-here" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-the-bowl-means-here">What is the bowl means here?</h2>
-<p>Firstly, we learn two new concepts here: <strong>gradient descent</strong> and <strong>loss function</strong>.</p>
-<p>Basically, the bowl represents the shape of the loss function, and the bottom of it is where the loss becomes minimum.</p>
-<p>The method we use to find this minimum is <em>gradient descent</em>. It calculates the slope between two nearby points and moves the model slightly in the direction where the slope decreases, slowly descending toward the lowest point.<br>
-This matters because a smaller error usually means a better prediction.</p>
-<p>But interestingly, when the model reaches the bottom of the bowl, it stops. This leads to the idea of <strong>local and global minima</strong>.<br>
-A local minimum is a point that looks like the bottom from a close view but is not the lowest place overall, while the global minimum is the true lowest point in the entire surface. A model can easily get trapped in a local minimum, thinking it has “learned enough,” when in fact it has only found a comfortable but imperfect answer.</p>
 </section>
-<section id="why-dont-we-stay-in-the-bottom" class="level2">
-<h2 class="anchored" data-anchor-id="why-dont-we-stay-in-the-bottom">Why don’t we stay in the bottom?</h2>
-<p>However, in reality, the world is not a perfectly smooth bowl: it is noisy, irregular, and full of uncertainty.<br>
-If we keep staying at one point that happens to be false, the results may get worse instead of better.<br>
-This is why <strong>randomness</strong> becomes essential and we introduce it into our model.<br>
-Models estimate <em>likelihoods</em> instead of <em>certainties</em>, and randomness helps them escape from the wrong valleys.<br>
-The book suggests that uncertainty is not failure but a condition for discovery. Researchers introduced <strong>stochastic gradient descent</strong>, which uses randomness to explore better paths, whihc is a mathematical form of curiosity in human beings.</p>
-<p>Intelligence may live in the tension between the two. Too much order and it freezes; too much randomness and it dissolves. We have to find a balance between stability and exploration.<br>
-## Closing</p>
-<p>Then though researchers haven’t (and it is a hard question to solve!) to find let the machines learn to find balance within <strong>themselves</strong>. We begin to think a deeper question:</p>
-<p>how do they recognize balance in the world around them?</p>
-<p>To see order is one thing; to know <em>why</em> two things belong together is another. Perhaps that is where the next story begins.</p>
+<section id="closing" class="level2">
+<h2 class="anchored" data-anchor-id="closing">Closing</h2>
+<p>Chapters 5 and 6 show how powerful the mathematical ideas can be. By formalizing similarity and reshaping space, make dot product between matrices and vectors, machines can discover structure in data that would otherwise feel overwhelming. Patterns emerge, groups form, and learning becomes possible at scale.</p>
+<p>Meanwhile, this clarity comes with a cost. Anything that does not fit neatly into the chosen features or dimensions is softened, flattened, or left behind. Differences that are hard to encode rarely survive the transformation.</p>
+<p>What would this cause?</p>
+<p><strong>It simplifies the world the model gets to see.</strong> When complexity is flattened, subtle motivations, mixed identities, and shifting contexts are treated as noise rather than signal. Over time, patterns that align with the model’s assumptions are reinforced, while those that do not slowly fade from view. Recommendation systems grow more confident, but also more narrow. Difference does not disappear because it is wrong, but because it does not fit in.</p>
+<p>Adding more dimensions seems like an obvious response. But I am not sure it really brings back what was lost. It may only give us a more spacious place to lose it in. We would see this in the next chapters.</p>
 
 
 </section>

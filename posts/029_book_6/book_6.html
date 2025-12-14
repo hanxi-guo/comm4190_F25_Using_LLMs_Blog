@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Hanxi">
-<meta name="dcterms.date" content="2025-10-25">
-<meta name="description" content="Why Intelligence Looks Like a Bowl?">
+<meta name="dcterms.date" content="2025-12-08">
+<meta name="description" content="Cats, Convolution, and Ignoring the Textbooks">
 
-<title>Readings of Why Machines Learn (Part 3) – Prompts, Dreams, and Me</title>
+<title>Readings of Why Machines Learn (Part 6) – Prompts, Dreams, and Me</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,10 +118,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Readings of Why Machines Learn (Part 3)</h1>
+      <h1 class="title">Readings of Why Machines Learn (Part 6)</h1>
                   <div>
         <div class="description">
-          Why Intelligence Looks Like a Bowl?
+          Cats, Convolution, and Ignoring the Textbooks
         </div>
       </div>
                           <div class="quarto-categories">
@@ -145,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 25, 2025</p>
+        <p class="date">December 8, 2025</p>
       </div>
     </div>
     
@@ -164,40 +164,42 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<blockquote class="blockquote">
+<p>I always thought that human engineers would not be smart enough to conceive and design an intelligent machine. It will have to basically design itself through learning.</p>
+</blockquote>
+<p>After experiencing the winter of AI and fixing the logic problem with <em>Backpropagation</em>, we run into two new issues. First, how do we make a machine actually see things (like the internet’s favorite subject: cats)? Second, what happens when we make these machines ridiculously, unnecessarily huge?</p>
+<p>Chapters 11 and 12 take us from “Oh, that’s clever design” to “Wait, why does this work?”</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="image.png" class="img-fluid figure-img"></p>
+<p><img src="cover.png" class="img-fluid figure-img"></p>
 <figcaption>Image created by Gemini</figcaption>
 </figure>
 </div>
-<blockquote class="blockquote">
-<p>By making the steps small, having a lot of them, we are getting an averaging effect that takes you down to the bottom of the bowl —-Bernard Widrow</p>
-</blockquote>
-<p>If intelligence is a bowl and we are all sliding toward the bottom, what does it mean to stop?<br>
-If you haven’t read the first blog, you can find it <a href="https://hanxi-guo.github.io/comm4190_F25_Using_LLMs_Blog/posts/018_book_2/book_2.html">here</a>. It begins with the ducklings, the perceptron, and the quiet shift from understanding to optimization.</p>
-<p>In this post, we continue with Chapters 3 and 4 of <em>Why Machines Learn</em>, where the book starts to draw the “bowl” itself, which is the mathematical landscape of error.<br>
-It is here that learning becomes geometry, and intelligence begins to take the shape of a surface we can fall into, step by step, gradient by gradient.</p>
-<section id="what-is-the-bowl-means-here" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-the-bowl-means-here">What is the bowl means here?</h2>
-<p>Firstly, we learn two new concepts here: <strong>gradient descent</strong> and <strong>loss function</strong>.</p>
-<p>Basically, the bowl represents the shape of the loss function, and the bottom of it is where the loss becomes minimum.</p>
-<p>The method we use to find this minimum is <em>gradient descent</em>. It calculates the slope between two nearby points and moves the model slightly in the direction where the slope decreases, slowly descending toward the lowest point.<br>
-This matters because a smaller error usually means a better prediction.</p>
-<p>But interestingly, when the model reaches the bottom of the bowl, it stops. This leads to the idea of <strong>local and global minima</strong>.<br>
-A local minimum is a point that looks like the bottom from a close view but is not the lowest place overall, while the global minimum is the true lowest point in the entire surface. A model can easily get trapped in a local minimum, thinking it has “learned enough,” when in fact it has only found a comfortable but imperfect answer.</p>
+<section id="forcing-the-machine-to-wear-glasses" class="level2">
+<h2 class="anchored" data-anchor-id="forcing-the-machine-to-wear-glasses">Forcing the machine to wear glasses</h2>
+<p>Chapter 11 is about Convolutional Neural Networks (CNNs), the technology behind almost all modern computer vision.</p>
+<p>The author explains how we stopped treating images as random lists of pixels and started respecting their structure. For example, if you connect every pixel to every neuron, the model has to re-learn what a “cat” looks like every time the cat moves one inch to the right. That’s inefficient. So, scientists like Yann LeCun designed convolution: a small filter that slides over the image.</p>
+<p>The math here enforces translation invariance. It’s a fancy way of saying: “A cat in the top left is the same as a cat in the bottom right.”</p>
+<p>I like this chapter because it feels like engineering. We, the humans, understood the world (objects have edges, shapes don’t change when they move), and we hard-coded that understanding into the network structure. We are essentially forcing the AI to see the world through human-designed glasses. It feels safe. It feels like we are in control.</p>
 </section>
-<section id="why-dont-we-stay-in-the-bottom" class="level2">
-<h2 class="anchored" data-anchor-id="why-dont-we-stay-in-the-bottom">Why don’t we stay in the bottom?</h2>
-<p>However, in reality, the world is not a perfectly smooth bowl: it is noisy, irregular, and full of uncertainty.<br>
-If we keep staying at one point that happens to be false, the results may get worse instead of better.<br>
-This is why <strong>randomness</strong> becomes essential and we introduce it into our model.<br>
-Models estimate <em>likelihoods</em> instead of <em>certainties</em>, and randomness helps them escape from the wrong valleys.<br>
-The book suggests that uncertainty is not failure but a condition for discovery. Researchers introduced <strong>stochastic gradient descent</strong>, which uses randomness to explore better paths, whihc is a mathematical form of curiosity in human beings.</p>
-<p>Intelligence may live in the tension between the two. Too much order and it freezes; too much randomness and it dissolves. We have to find a balance between stability and exploration.<br>
-## Closing</p>
-<p>Then though researchers haven’t (and it is a hard question to solve!) to find let the machines learn to find balance within <strong>themselves</strong>. We begin to think a deeper question:</p>
-<p>how do they recognize balance in the world around them?</p>
-<p>To see order is one thing; to know <em>why</em> two things belong together is another. Perhaps that is where the next story begins.</p>
+<section id="and-then-the-curve-went-weird" class="level2">
+<h2 class="anchored" data-anchor-id="and-then-the-curve-went-weird">…And then the curve went weird</h2>
+<p>Then Chapter 12 arrives and throws all that safety out the window. It talks about Double Descent.</p>
+<p>In traditional statistics (and in every Intro to ML class), base on what we have learnt, there is a golden rule: Do not overfit. If your model is too complex, it will memorize the training data and fail on the test data. The error curve should go down, and then shoot up if you keep adding parameters.</p>
+<p>But in modern Deep Learning, if you keep making the model way bigger than it has any right to be, the error shoots up… and then, magically, goes down again? (Yes this is shocking to me when I firstly read about it).</p>
+<p>Ananthaswamy calls this “Terra Incognita.” It defies classical intuition. It’s like studying for an exam:</p>
+<ol type="1">
+<li><p>Underfitting: You didn’t study. You fail.</p></li>
+<li><p>Overfitting: You memorized the practice questions but don’t understand the concepts. You fail the real exam.</p></li>
+<li><p>Double Descent: You memorized the entire textbook, every footnote, and the teacher’s diary. Suddenly… you pass?</p></li>
+</ol>
+<p>This is the “interpolation regime.” The model is so big it fits everything perfectly, yet somehow it smooths out and generalizes well.</p>
+</section>
+<section id="closing" class="level2">
+<h2 class="anchored" data-anchor-id="closing">Closing</h2>
+<p>With CNNs, we played the role of the intelligent designer. We crafted the lens, confident that we knew how the machine should see.</p>
+<p>But with Double Descent, we stopped designing and started overwhelming. We are succeeding not by following the rules of statistics, but by making models so colossally huge that they simply crush the rules under their own weight.</p>
+<p>It leaves me with a lingering question: Are we actually ‘solving’ intelligence, or are we just building a high-dimensional lookup table that is—quite literally—too big to fail? The math is elegant and the output is brilliant, sure. But standing here, watching the error curve dip for reasons we can barely explain, it feels less like we’ve discovered a formula, and more like we’ve successfully cast a spell. Let’s just hope we know the counter-spell.</p>
 
 
 </section>

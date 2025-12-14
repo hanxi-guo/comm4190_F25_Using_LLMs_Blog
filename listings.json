@@ -2,11 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/011_book_1/part1.html",
-      "/posts/021_book_3/book_3.html",
       "/posts/029_book_6/book_6.html",
       "/posts/027_book_5/book_5.html",
       "/posts/024_book_4/book_4.html",
+      "/posts/021_book_3/book_3.html",
       "/posts/023_letters/letter.html",
       "/posts/022_atlas/atlas.html",
       "/posts/018_book_2/book_2.html",
@@ -17,6 +16,7 @@
       "/posts/014_noble/noble.html",
       "/posts/013_ophelia/ophelia.html",
       "/posts/012_gpt_buying/buying.html",
+      "/posts/011_book_1/part1.html",
       "/posts/010_mbti_part4/part_4.html",
       "/posts/009_ages/age.html",
       "/posts/008_class_activity/index.html",
